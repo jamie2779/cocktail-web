@@ -1,3 +1,4 @@
+import { Box, Text, VStack } from "@chakra-ui/react";
 import Image from "next/image";
 
 interface MenuProps {
@@ -9,14 +10,11 @@ interface MenuProps {
 
 const Menu = ({ imageSrc, name, description, abv }: MenuProps) => {
   return (
-    <div
-      style={{
-        display: "flex",
-        alignItems: "center",
-        padding: "16px",
-        backgroundColor: "transparent",
-        borderRadius: "16px",
-      }}
+    <Box
+      display="flex"
+      padding="16px"
+      backgroundColor="transparent"
+      borderRadius="16px"
     >
       <Image
         src={imageSrc}
@@ -25,16 +23,18 @@ const Menu = ({ imageSrc, name, description, abv }: MenuProps) => {
         height={80}
         style={{ borderRadius: "10px" }}
       />
-      <div style={{ marginLeft: "16px" }}>
-        <p style={{ fontSize: "10px", color: "#999", margin: 0 }}>
+      <VStack align="flex-start" ml="12px" mt="9px" spacing="2px">
+        <Text fontSize="13px" color="gray.500" margin={0}>
           {description}
-        </p>
-        <h3 style={{ fontSize: "14px", fontWeight: "bold", margin: "4px 0" }}>
+        </Text>
+        <Text fontSize="18px" fontWeight="semibold" lineHeight="1.2">
           {name}
-        </h3>
-        <p style={{ fontSize: "12px", color: "#7174BE" }}>ABV {abv}%</p>
-      </div>
-    </div>
+        </Text>
+        <Text fontSize="13px" color="#7174BE">
+          ABV {abv}%
+        </Text>
+      </VStack>
+    </Box>
   );
 };
 

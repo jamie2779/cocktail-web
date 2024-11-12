@@ -1,3 +1,4 @@
+import { Box, VStack } from "@chakra-ui/react";
 import Title from "@/components/Title";
 import Nav from "@/components/Nav";
 import MenuList from "@/components/MenuList";
@@ -67,20 +68,20 @@ export default function Home() {
   ];
 
   return (
-    <div
-      style={{
-        width: "402px",
-        margin: "0 auto",
-        backgroundColor: "#f9f9f9",
-      }}
+    <Box
+      width="402px"
+      margin="0 auto"
+      backgroundColor="#f9f9f9"
+      display="flex"
+      flexDirection="column"
     >
-      <div
-        style={{
-          width: "370px",
-          overflowY: "scroll",
-          paddingTop: "70px",
-          marginLeft: "16px",
-        }}
+      <VStack
+        flex="1"
+        overflowY="scroll"
+        margin="24px"
+        pt="50px"
+        spacing="16px"
+        align="stretch"
       >
         <Title category="보드카 베이스" title="깔끔하고 시원한 칵테일이에요" />
         <MenuList menuItems={vodkaItems} />
@@ -88,8 +89,8 @@ export default function Home() {
         <MenuList menuItems={rumItems} />
         <Title category="혼합 베이스" title="특별한 시간을 위한 칵테일" />
         <MenuList menuItems={mixItems} />
-      </div>
+      </VStack>
       <Nav />
-    </div>
+    </Box>
   );
 }

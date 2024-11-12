@@ -1,3 +1,5 @@
+import { Box, Text } from "@chakra-ui/react";
+
 interface NavItemProps {
   icon: React.ReactNode;
   label: string;
@@ -5,19 +7,12 @@ interface NavItemProps {
 
 const NavItem: React.FC<NavItemProps> = ({ icon, label }) => {
   return (
-    <div
-      style={{
-        display: "flex",
-        alignItems: "center",
-        padding: "8px",
-        cursor: "pointer",
-      }}
-    >
+    <Box display="flex" alignItems="center" padding="8px" cursor="pointer">
       {icon}
-      <span style={{ marginLeft: "8px", fontSize: "14px", color: "#30336b" }}>
+      <Text marginLeft="8px" fontSize="14px" color="#30336b">
         {label}
-      </span>
-    </div>
+      </Text>
+    </Box>
   );
 };
 

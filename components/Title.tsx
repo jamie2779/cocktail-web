@@ -1,3 +1,5 @@
+import { Box, Text, Heading } from "@chakra-ui/react";
+
 interface TitleProps {
   category: string;
   title: string;
@@ -5,10 +7,14 @@ interface TitleProps {
 
 const Title: React.FC<TitleProps> = ({ category, title }) => {
   return (
-    <div style={{ marginLeft: "10px", marginBottom: "20px" }}>
-      <h2 style={{ fontSize: "24px", fontWeight: "bold" }}>{category}</h2>
-      <h4 style={{ fontSize: "14px", opacity: 0.5 }}>{title}</h4>
-    </div>
+    <Box ml="10px" mb="10px">
+      <Heading as="h2" fontSize="24px" fontWeight="bold">
+        {category}
+      </Heading>
+      <Text fontSize="16px" opacity={0.5}>
+        {title}
+      </Text>
+    </Box>
   );
 };
 

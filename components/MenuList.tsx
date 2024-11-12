@@ -1,3 +1,4 @@
+import { Box } from "@chakra-ui/react";
 import Menu from "./Menu";
 
 interface MenuItem {
@@ -13,14 +14,11 @@ interface MenuListProps {
 
 const MenuList = ({ menuItems }: MenuListProps) => {
   return (
-    <div
-      style={{
-        padding: "16px",
-        backgroundColor: "#fff",
-        borderRadius: "16px",
-        marginBottom: "50px",
-        boxShadow: "0 4px 30px rgba(0, 0, 0, 0.08)",
-      }}
+    <Box
+      backgroundColor="#fff"
+      borderRadius="16px"
+      marginBottom="50px"
+      boxShadow="0 4px 30px rgba(0, 0, 0, 0.08)"
     >
       {menuItems.map((item: MenuItem, index: number) => (
         <Menu
@@ -31,7 +29,7 @@ const MenuList = ({ menuItems }: MenuListProps) => {
           abv={item.abv}
         />
       ))}
-    </div>
+    </Box>
   );
 };
 
