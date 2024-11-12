@@ -1,101 +1,95 @@
-import Image from "next/image";
+import Title from "@/components/Title";
+import Nav from "@/components/Nav";
+import MenuList from "@/components/MenuList";
 
 export default function Home() {
-  return (
-    <div className="grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20 font-[family-name:var(--font-geist-sans)]">
-      <main className="flex flex-col gap-8 row-start-2 items-center sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={180}
-          height={38}
-          priority
-        />
-        <ol className="list-inside list-decimal text-sm text-center sm:text-left font-[family-name:var(--font-geist-mono)]">
-          <li className="mb-2">
-            Get started by editing{" "}
-            <code className="bg-black/[.05] dark:bg-white/[.06] px-1 py-0.5 rounded font-semibold">
-              app/page.tsx
-            </code>
-            .
-          </li>
-          <li>Save and see your changes instantly.</li>
-        </ol>
+  const vodkaItems = [
+    {
+      imageSrc: "/Cosmopolitan.png",
+      name: "코스모폴리탄",
+      description: "시티 라이프의 감각적인 매력",
+      abv: 22.9,
+    },
+    {
+      imageSrc: "/Cape_Codder.png",
+      name: "케이프 코더",
+      description: "시원한 바닷바람을 담은 보드카 칵테일",
+      abv: 7.5,
+    },
+    {
+      imageSrc: "/Vodka_Gimlet.png",
+      name: "보드카 김렛",
+      description: "진한 여운을 남기는 상쾌함",
+      abv: 26.7,
+    },
+    {
+      imageSrc: "/Vodka_Sour.png",
+      name: "보드카 사워",
+      description: "산미가 돋보이는 보드카의 매력",
+      abv: 20.0,
+    },
+  ];
 
-        <div className="flex gap-4 items-center flex-col sm:flex-row">
-          <a
-            className="rounded-full border border-solid border-transparent transition-colors flex items-center justify-center bg-foreground text-background gap-2 hover:bg-[#383838] dark:hover:bg-[#ccc] text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={20}
-              height={20}
-            />
-            Deploy now
-          </a>
-          <a
-            className="rounded-full border border-solid border-black/[.08] dark:border-white/[.145] transition-colors flex items-center justify-center hover:bg-[#f2f2f2] dark:hover:bg-[#1a1a1a] hover:border-transparent text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 sm:min-w-44"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Read our docs
-          </a>
-        </div>
-      </main>
-      <footer className="row-start-3 flex gap-6 flex-wrap items-center justify-center">
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/file.svg"
-            alt="File icon"
-            width={16}
-            height={16}
-          />
-          Learn
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/window.svg"
-            alt="Window icon"
-            width={16}
-            height={16}
-          />
-          Examples
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/globe.svg"
-            alt="Globe icon"
-            width={16}
-            height={16}
-          />
-          Go to nextjs.org →
-        </a>
-      </footer>
+  const rumItems = [
+    {
+      imageSrc: "/Daiquiri.png",
+      name: "다이키리",
+      description: "고전 속에 숨은 상큼한 달콤함",
+      abv: 22.9,
+    },
+    {
+      imageSrc: "/Rum_Gimlet.png",
+      name: "럼 김렛",
+      description: "부드러운 향과 산뜻한 균형",
+      abv: 26.7,
+    },
+    {
+      imageSrc: "/Rum_Sour.png",
+      name: "럼 사워",
+      description: "풍부한 과일 향과 상큼한 산미의 조화",
+      abv: 20.0,
+    },
+    {
+      imageSrc: "/Cranberry_Daiquiri.png",
+      name: "크랜베리 다이키리",
+      description: "과일 향과 함께 어우러진 산뜻한 한 잔",
+      abv: 17.1,
+    },
+  ];
+
+  const mixItems = [
+    {
+      imageSrc: "/Kamikaze.png",
+      name: "카미카제",
+      description: "강렬한 첫인상을 남기는 한 잔",
+      abv: 26.7,
+    },
+  ];
+
+  return (
+    <div
+      style={{
+        width: "402px",
+        margin: "0 auto",
+        backgroundColor: "#f9f9f9",
+      }}
+    >
+      <div
+        style={{
+          width: "370px",
+          overflowY: "scroll",
+          paddingTop: "70px",
+          marginLeft: "16px",
+        }}
+      >
+        <Title category="보드카 베이스" title="깔끔하고 시원한 칵테일이에요" />
+        <MenuList menuItems={vodkaItems} />
+        <Title category="럼 베이스" title="달콤하고 풍부한 향의 칵테일" />
+        <MenuList menuItems={rumItems} />
+        <Title category="혼합 베이스" title="특별한 시간을 위한 칵테일" />
+        <MenuList menuItems={mixItems} />
+      </div>
+      <Nav />
     </div>
   );
 }
