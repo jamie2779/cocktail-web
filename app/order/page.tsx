@@ -1,4 +1,4 @@
-import { Box, VStack,Image,Text } from "@chakra-ui/react";
+import { Box, VStack} from "@chakra-ui/react";
 import Title from "@/components/Title";
 import Nav from "@/components/Nav";
 import MenuList from "@/components/MenuList";
