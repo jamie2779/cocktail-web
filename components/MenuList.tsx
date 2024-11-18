@@ -10,12 +10,13 @@ interface MenuItem {
 
 interface MenuListProps {
   menuItems: MenuItem[];
+  background?:string;
 }
 
-const MenuList = ({ menuItems }: MenuListProps) => {
+const MenuList = ({ menuItems, background: color="#fff" }: MenuListProps) => {
   return (
     <Box
-      backgroundColor="#fff"
+      backgroundColor={color}
       borderRadius="16px"
       marginBottom="50px"
       boxShadow="0 4px 30px rgba(0, 0, 0, 0.08)"
