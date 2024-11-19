@@ -30,7 +30,9 @@ function Making({ imageSrc, name, description, abv }: MenuItem){
 }
 
 
+
 export default function Home() {
+  
   const examItems = [
     {
       imageSrc: "/Cosmopolitan.png",
@@ -38,9 +40,7 @@ export default function Home() {
       description: "시티 라이프의 감각적인 매력",
       abv: 22.9,
     },
-  ];
-  const vodkaItems = [
-
+ 
     {
       imageSrc: "/Cape_Codder.png",
       name: "케이프 코더",
@@ -79,16 +79,15 @@ export default function Home() {
         spacing="16px"
         align="stretch"
       >
-        <Making
-          imageSrc={examItems[0].imageSrc}
-          name={examItems[0].name}
-          description={examItems[0].description}
-          abv={examItems[0].abv}
-          />
-
-        <Title category="대기열" title="잠시 기다려 주세요" />
-        <MenuList menuItems={vodkaItems} />
         
+        <Making
+            imageSrc={examItems[0].imageSrc}
+            name={examItems[0].name}
+            description={examItems[0].description}
+            abv={examItems[0].abv}/>
+        
+        <Title category="현재 대기 중" title="잠시 기다려 주세요" />
+        <MenuList menuItems={examItems.slice(1, examItems.length)} />
       </VStack>
       
       <Nav />
