@@ -1,19 +1,15 @@
 import { Box, VStack} from "@chakra-ui/react";
 import Title from "@/components/Title";
 import Nav from "@/components/Nav";
-import MenuList from "@/components/MenuList";
+import MenuList,{MenuItem} from "@/components/MenuList";
 
-function Card(){
+function Making({ imageSrc, name, description, abv }: MenuItem){
   
-  const rumItems = [
+  const makingItems = [
     {
-      imageSrc: "/Cosmopolitan.png",
-      name: "코스모폴리탄",
-      description: "시티 라이프의 감각적인 매력",
-      abv: 22.9,
-      
+      imageSrc,name,description,abv
     },
-  ];
+  ]; 
   
   return (
       <VStack
@@ -26,7 +22,7 @@ function Card(){
       >
         
         <Title category="현재 제조 중" title="금방 맛있는 칵테일이 만들어져요" />
-        <MenuList menuItems={rumItems} background="#dadbe6"/>
+        <MenuList menuItems={makingItems} background="#dadbe6"/>
         
       </VStack>
 
@@ -34,10 +30,17 @@ function Card(){
 }
 
 
+
 export default function Home() {
   
-  const vodkaItems = [
-
+  const examItems = [
+    {
+      imageSrc: "/Cosmopolitan.png",
+      name: "코스모폴리탄",
+      description: "시티 라이프의 감각적인 매력",
+      abv: 22.9,
+    },
+ 
     {
       imageSrc: "/Cape_Codder.png",
       name: "케이프 코더",
@@ -76,10 +79,15 @@ export default function Home() {
         spacing="16px"
         align="stretch"
       >
-        <Card/>
-        <Title category="대기열" title="잠시 기다려 주세요" />
-        <MenuList menuItems={vodkaItems} />
         
+        <Making
+            imageSrc={examItems[0].imageSrc}
+            name={examItems[0].name}
+            description={examItems[0].description}
+            abv={examItems[0].abv}/>
+        
+        <Title category="현재 대기 중" title="잠시 기다려 주세요" />
+        <MenuList menuItems={examItems.slice(1, examItems.length)} />
       </VStack>
       
       <Nav />

@@ -1,7 +1,7 @@
 import { Box } from "@chakra-ui/react";
 import Menu from "./Menu";
 
-interface MenuItem {
+export interface MenuItem {
   imageSrc: string;
   name: string;
   description: string;
