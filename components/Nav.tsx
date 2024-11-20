@@ -1,8 +1,17 @@
+"use client";
+
 import { Box } from "@chakra-ui/react";
 import NavItem from "./NavItem";
 import Image from "next/image";
+import { useRouter } from "next/navigation";
 
 const Nav = () => {
+  const router = useRouter();
+
+  const handleNavigation = (path: string) => {
+    router.push(path);
+  };
+
   return (
     <Box
       position="fixed"
@@ -21,10 +30,12 @@ const Nav = () => {
       <NavItem
         icon={<Image src="/Drink.svg" alt="Menu" width={24} height={24} />}
         label="주문"
+        onClick={() => handleNavigation("/")}
       />
       <NavItem
         icon={<Image src="/History.svg" alt="History" width={24} height={24} />}
         label="대기열"
+        onClick={() => handleNavigation("/order")}
       />
     </Box>
   );

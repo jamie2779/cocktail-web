@@ -1,3 +1,5 @@
+"use client";
+
 import { Box, VStack } from "@chakra-ui/react";
 import Title from "@/components/Title";
 import Nav from "@/components/Nav";
