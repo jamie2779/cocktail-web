@@ -1,5 +1,4 @@
 import { Box, VStack,Heading,Text } from "@chakra-ui/react";
-import Image from "next/image";
 import Back from "@/components/Back";
 import Setting from "@/components/Setting";
 
@@ -55,52 +54,9 @@ export default function Admin() {
       </Heading>
       </Box>
 
-      <Box 
-      display="flex"
-      padding="16px"
-      backgroundColor="#FFFEFA"
-      justifyContent="space-between"
-      borderRadius="16px"
-      alignItems="center"
-      borderWidth={1}
-      >
-        <Text fontSize="18px" fontWeight="semibold" lineHeight="1.2">
-          {"보드카"}
-        </Text>
-        
-      <Image
-        src={"/Revise.png"}
-        alt = {"revise"}
-        width={40}
-        height={40}
-        
-      />
-      </Box>
-
-
-
-      <Box 
-      display="flex"
-      padding="16px"
-      backgroundColor="#FFFEFA"
-      justifyContent="space-between"
-      borderRadius="16px"
-      alignItems="center"
-      borderWidth={1}
-      
-      >
-        <Text fontSize="18px" fontWeight="semibold" lineHeight="1.2">
-          {"화이트 럼"}
-        </Text>
-        
-      <Image
-        src={"/Revise.png"}
-        alt = {"revise"}
-        width={40}
-        height={40}
-        
-      />
-      </Box>
+        {examSettings.map((name) => (
+        <Setting key={name} name={name} />
+      ))}
 
 
 
