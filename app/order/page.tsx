@@ -15,7 +15,6 @@ function Making({ imageSrc, name, description, abv }: MenuItem){
       <VStack
         flex="1"
         overflowY="scroll"
-        pt="50px"
         spacing="16px"
         align="stretch"
         
