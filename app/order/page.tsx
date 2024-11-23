@@ -2,6 +2,7 @@ import { Box, VStack} from "@chakra-ui/react";
 import Title from "@/components/Title";
 import Nav from "@/components/Nav";
 import MenuList,{MenuItem} from "@/components/MenuList";
+import Back from "@/components/Back";
 
 function Making({ imageSrc, name, description, abv }: MenuItem){
   
@@ -12,6 +13,7 @@ function Making({ imageSrc, name, description, abv }: MenuItem){
   ]; 
   
   return (
+    
       <VStack
         flex="1"
         overflowY="scroll"
@@ -70,11 +72,11 @@ export default function Home() {
       display="flex"
       flexDirection="column"
     >
+      <Back/>
       <VStack
         flex="1"
         overflowY="scroll"
         margin="24px"
-        pt="50px"
         spacing="16px"
         align="stretch"
       >
