@@ -1,4 +1,4 @@
-import { Box, VStack,Heading,Text } from "@chakra-ui/react";
+import { Box, VStack,Heading } from "@chakra-ui/react";
 import Back from "@/components/Back";
 import Setting from "@/components/Setting";
 
