@@ -1,6 +1,6 @@
 import { Box,Text, Button,VStack} from "@chakra-ui/react";
 import OverlayMenu from "@/components/OverlayMenu"
-export default function Home() {
+export default function Complete() {
   const examItem = 
     {
       imageSrc: "/Cosmopolitan.png",
@@ -67,4 +67,4 @@ color = "#2A2A2A"
 
 
   );
-}
+};
