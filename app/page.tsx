@@ -4,7 +4,7 @@ import { Box, VStack } from "@chakra-ui/react";
 import Title from "@/components/Title";
 import Nav from "@/components/Nav";
 import MenuList from "@/components/MenuList";
-
+import Back from "@/components/Back";
 export default function Home() {
   const vodkaItems = [
     {
@@ -77,11 +77,11 @@ export default function Home() {
       display="flex"
       flexDirection="column"
     >
+      <Back/>
       <VStack
         flex="1"
         overflowY="scroll"
         margin="24px"
-        pt="50px"
         spacing="16px"
         align="stretch"
       >
