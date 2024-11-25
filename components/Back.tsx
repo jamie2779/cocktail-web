@@ -11,7 +11,7 @@ export default function Back() {
     router.push(path);
   };
   return (
-    <Box margin={5}>
+    <Box ml={5} mt={6}>
       <IconButton
         backgroundColor={"#f9f9f9"}
         aria-label="back"
