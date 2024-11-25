@@ -1,74 +1,23 @@
 "use client";
 
-import { Box, VStack } from "@chakra-ui/react";
-import Title from "@/components/Title";
-import Nav from "@/components/Nav";
-import MenuList from "@/components/MenuList";
-import Back from "@/components/Back";
+import {
+  Box,
+  VStack,
+  Heading,
+  Text,
+  Flex,
+  Button,
+  IconButton,
+} from "@chakra-ui/react";
+import Image from "next/image";
+import { useRouter } from "next/navigation";
+
 export default function Home() {
-  const vodkaItems = [
-    {
-      imageSrc: "/Cosmopolitan.png",
-      name: "코스모폴리탄",
-      description: "시티 라이프의 감각적인 매력",
-      abv: 22.9,
-    },
-    {
-      imageSrc: "/Cape_Codder.png",
-      name: "케이프 코더",
-      description: "시원한 바닷바람을 담은 보드카 칵테일",
-      abv: 7.5,
-    },
-    {
-      imageSrc: "/Vodka_Gimlet.png",
-      name: "보드카 김렛",
-      description: "진한 여운을 남기는 상쾌함",
-      abv: 26.7,
-    },
-    {
-      imageSrc: "/Vodka_Sour.png",
-      name: "보드카 사워",
-      description: "산미가 돋보이는 보드카의 매력",
-      abv: 20.0,
-    },
-  ];
+  const router = useRouter();
 
-  const rumItems = [
-    {
-      imageSrc: "/Daiquiri.png",
-      name: "다이키리",
-      description: "고전 속에 숨은 상큼한 달콤함",
-      abv: 22.9,
-    },
-    {
-      imageSrc: "/Rum_Gimlet.png",
-      name: "럼 김렛",
-      description: "부드러운 향과 산뜻한 균형",
-      abv: 26.7,
-    },
-    {
-      imageSrc: "/Rum_Sour.png",
-      name: "럼 사워",
-      description: "풍부한 과일 향과 상큼한 산미의 조화",
-      abv: 20.0,
-    },
-    {
-      imageSrc: "/Cranberry_Daiquiri.png",
-      name: "크랜베리 다이키리",
-      description: "과일 향과 함께 어우러진 산뜻한 한 잔",
-      abv: 17.1,
-    },
-  ];
-
-  const mixItems = [
-    {
-      imageSrc: "/Kamikaze.png",
-      name: "카미카제",
-      description: "강렬한 첫인상을 남기는 한 잔",
-      abv: 26.7,
-    },
-  ];
-
+  const handleNavigation = (path: string) => {
+    router.push(path);
+  };
   return (
     <Box
       width="402px"
@@ -77,7 +26,21 @@ export default function Home() {
       display="flex"
       flexDirection="column"
     >
-      <Back/>
+      <Flex justifyContent="flex-end" margin={30}>
+        <IconButton
+          backgroundColor={"#f9f9f9"}
+          aria-label="admin"
+          cursor="pointer"
+        >
+          <Image
+            onClick={() => handleNavigation("/admin")}
+            src={"/User.png"}
+            alt={"user"}
+            width={40}
+            height={50}
+          />
+        </IconButton>
+      </Flex>
       <VStack
         flex="1"
         overflowY="scroll"
@@ -85,14 +48,34 @@ export default function Home() {
         spacing="16px"
         align="stretch"
       >
-        <Title category="보드카 베이스" title="깔끔하고 시원한 칵테일이에요" />
-        <MenuList menuItems={vodkaItems} />
-        <Title category="럼 베이스" title="달콤하고 풍부한 향의 칵테일" />
-        <MenuList menuItems={rumItems} />
-        <Title category="혼합 베이스" title="특별한 시간을 위한 칵테일" />
-        <MenuList menuItems={mixItems} />
+        <Box ml="10px" mb="10px">
+          <Heading as="h2" fontSize="24px" fontWeight="bold" textAlign="center">
+            {"환영합니다!"}
+          </Heading>
+          <Text fontSize="16px" opacity={0.5} textAlign="center">
+            {"원하는 칵테일을 제조해 드리는 ‘칵테일 제조기’ 입니다."}
+          </Text>
+
+          <Button
+            width={340}
+            height={254}
+            backgroundColor="#4C51BF"
+            marginTop={85}
+            marginBottom={120}
+            onClick={() => handleNavigation("/order")}
+          >
+            <VStack>
+              <Image
+                src={"/Cocktail.png"}
+                alt={"cocktail"}
+                width={200}
+                height={200}
+              />
+              <Text fontSize={20}>주문하기</Text>
+            </VStack>
+          </Button>
+        </Box>
       </VStack>
-      <Nav />
     </Box>
   );
 }

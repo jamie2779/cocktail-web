@@ -1,47 +1,19 @@
-import { Box, VStack} from "@chakra-ui/react";
+"use client";
+
+import { Box, VStack } from "@chakra-ui/react";
 import Title from "@/components/Title";
 import Nav from "@/components/Nav";
-import MenuList,{MenuItem} from "@/components/MenuList";
+import MenuList from "@/components/MenuList";
 import Back from "@/components/Back";
 
-function Making({ imageSrc, name, description, abv }: MenuItem){
-  
-  const makingItems = [
-    {
-      imageSrc,name,description,abv
-    },
-  ]; 
-  
-  return (
-    
-      <VStack
-        flex="1"
-        overflowY="scroll"
-        spacing="16px"
-        align="stretch"
-        
-      >
-        
-        <Title category="현재 제조 중" title="금방 맛있는 칵테일이 만들어져요" />
-        <MenuList menuItems={makingItems} background="#dadbe6"/>
-        
-      </VStack>
-
-  );
-}
-
-
-
 export default function Home() {
-  
-  const examItems = [
+  const vodkaItems = [
     {
       imageSrc: "/Cosmopolitan.png",
       name: "코스모폴리탄",
       description: "시티 라이프의 감각적인 매력",
       abv: 22.9,
     },
- 
     {
       imageSrc: "/Cape_Codder.png",
       name: "케이프 코더",
@@ -62,7 +34,41 @@ export default function Home() {
     },
   ];
 
+  const rumItems = [
+    {
+      imageSrc: "/Daiquiri.png",
+      name: "다이키리",
+      description: "고전 속에 숨은 상큼한 달콤함",
+      abv: 22.9,
+    },
+    {
+      imageSrc: "/Rum_Gimlet.png",
+      name: "럼 김렛",
+      description: "부드러운 향과 산뜻한 균형",
+      abv: 26.7,
+    },
+    {
+      imageSrc: "/Rum_Sour.png",
+      name: "럼 사워",
+      description: "풍부한 과일 향과 상큼한 산미의 조화",
+      abv: 20.0,
+    },
+    {
+      imageSrc: "/Cranberry_Daiquiri.png",
+      name: "크랜베리 다이키리",
+      description: "과일 향과 함께 어우러진 산뜻한 한 잔",
+      abv: 17.1,
+    },
+  ];
 
+  const mixItems = [
+    {
+      imageSrc: "/Kamikaze.png",
+      name: "카미카제",
+      description: "강렬한 첫인상을 남기는 한 잔",
+      abv: 26.7,
+    },
+  ];
 
   return (
     <Box
@@ -72,7 +78,7 @@ export default function Home() {
       display="flex"
       flexDirection="column"
     >
-      <Back/>
+      <Back />
       <VStack
         flex="1"
         overflowY="scroll"
@@ -80,23 +86,14 @@ export default function Home() {
         spacing="16px"
         align="stretch"
       >
-        
-        <Making
-            imageSrc={examItems[0].imageSrc}
-            name={examItems[0].name}
-            description={examItems[0].description}
-            abv={examItems[0].abv}/>
-        
-        <Title category="현재 대기 중" title="잠시 기다려 주세요" />
-        <MenuList menuItems={examItems.slice(1, examItems.length)} />
+        <Title category="보드카 베이스" title="깔끔하고 시원한 칵테일이에요" />
+        <MenuList menuItems={vodkaItems} />
+        <Title category="럼 베이스" title="달콤하고 풍부한 향의 칵테일" />
+        <MenuList menuItems={rumItems} />
+        <Title category="혼합 베이스" title="특별한 시간을 위한 칵테일" />
+        <MenuList menuItems={mixItems} />
       </VStack>
-      
       <Nav />
     </Box>
   );
 }
-
-
-
-
-

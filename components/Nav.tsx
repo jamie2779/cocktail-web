@@ -30,12 +30,12 @@ const Nav = () => {
       <NavItem
         icon={<Image src="/Drink.svg" alt="Menu" width={24} height={24} />}
         label="주문"
-        onClick={() => handleNavigation("/")}
+        onClick={() => handleNavigation("/order")}
       />
       <NavItem
         icon={<Image src="/History.svg" alt="History" width={24} height={24} />}
         label="대기열"
-        onClick={() => handleNavigation("/order")}
+        onClick={() => handleNavigation("/queue")}
       />
     </Box>
   );

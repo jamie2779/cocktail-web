@@ -1,3 +1,5 @@
+"use client";
+
 import { Box, Text } from "@chakra-ui/react";
 import { MouseEventHandler } from "react";
 
@@ -15,6 +17,7 @@ const NavItem: React.FC<NavItemProps> = ({ icon, label, onClick }) => {
       padding="8px"
       cursor="pointer"
       onClick={onClick}
+      _hover={{ backgroundColor: "#787fff" }}
     >
       {icon}
       <Text marginLeft="8px" fontSize="14px" color="#30336b">
