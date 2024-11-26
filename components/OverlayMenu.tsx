@@ -1,4 +1,4 @@
-import { Box, Text, VStack,HStack} from "@chakra-ui/react";
+import { Box, Text, VStack, HStack } from "@chakra-ui/react";
 import Image from "next/image";
 
 interface MenuProps {
@@ -21,22 +21,22 @@ const OverlayMenu = ({ imageSrc, name, description, abv }: MenuProps) => {
     >
       <HStack>
         <Image
-            src={imageSrc}
-            alt={name}
-            width={130}
-            height={130}
-            style={{ borderRadius: "10px" }}
+          src={imageSrc}
+          alt={name}
+          width={130}
+          height={130}
+          style={{ borderRadius: "10px" }}
         />
         <VStack align="center" ml="12px" mt="9px" spacing="2px">
-            <Text fontSize="13px" color="gray.500" margin={0}>
+          <Text fontSize="13px" color="gray.500" margin={0}>
             {description}
-            </Text>
-            <Text fontSize="18px" fontWeight="semibold" lineHeight="1.2">
+          </Text>
+          <Text fontSize="18px" fontWeight="semibold" lineHeight="1.2">
             {name}
-            </Text>
-            <Text fontSize="13px" color="#7174BE">
+          </Text>
+          <Text fontSize="13px" color="#7174BE">
             ABV {abv}%
-            </Text>
+          </Text>
         </VStack>
       </HStack>
     </Box>

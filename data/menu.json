@@ -1,0 +1,157 @@
+[
+  {
+    "cocktail": "Martini",
+    "name": "마티니",
+    "abv": 36.4,
+    "ingredients": {
+      "gin": 60,
+      "dry_vermouth": 10,
+      "ice": false,
+      "garnish": "Olive or lemon twist"
+    },
+    "imageSrc": "none"
+  },
+  {
+    "cocktail": "Manhattan",
+    "name": "맨해튼",
+    "abv": 31.0,
+    "ingredients": {
+      "rye_whiskey": 60,
+      "sweet_vermouth": 30,
+      "angostura_bitters": 2,
+      "ice": false,
+      "garnish": "Cherry"
+    },
+    "imageSrc": "none"
+  },
+  {
+    "cocktail": "Negroni",
+    "name": "네그로니",
+    "abv": 24.0,
+    "ingredients": {
+      "gin": 30,
+      "campari": 30,
+      "sweet_vermouth": 30,
+      "ice": true,
+      "garnish": "Orange peel"
+    },
+    "imageSrc": "none"
+  },
+  {
+    "cocktail": "Daiquiri",
+    "name": "다이키리",
+    "abv": 25.0,
+    "ingredients": {
+      "white_rum": 60,
+      "lime_juice": 30,
+      "simple_syrup": 15,
+      "ice": false,
+      "garnish": "Lime wheel"
+    },
+    "imageSrc": "/Daiquiri.png"
+  },
+  {
+    "cocktail": "Margarita",
+    "name": "마르가리타",
+    "abv": 27.0,
+    "ingredients": {
+      "tequila": 50,
+      "triple_sec": 25,
+      "lime_juice": 25,
+      "ice": false,
+      "garnish": "Salt rim and lime wedge"
+    },
+    "imageSrc": "none"
+  },
+  {
+    "cocktail": "Cosmopolitan",
+    "name": "코스모폴리탄",
+    "abv": 20.3,
+    "ingredients": {
+      "vodka": 40,
+      "triple_sec": 15,
+      "cranberry_juice": 30,
+      "lime_juice": 15,
+      "ice": false,
+      "garnish": "Lime wedge"
+    },
+    "imageSrc": "/Cosmopolitan.png"
+  },
+  {
+    "cocktail": "Pina Colada",
+    "name": "피나 콜라다",
+    "abv": 13.0,
+    "ingredients": {
+      "white_rum": 45,
+      "coconut_cream": 60,
+      "pineapple_juice": 90,
+      "ice": true,
+      "garnish": "Pineapple wedge and cherry"
+    },
+    "imageSrc": "none"
+  },
+  {
+    "cocktail": "Sidecar",
+    "name": "사이드카",
+    "abv": 27.0,
+    "ingredients": {
+      "cognac": 50,
+      "triple_sec": 20,
+      "lemon_juice": 20,
+      "ice": false,
+      "garnish": "Sugar rim and lemon twist"
+    },
+    "imageSrc": "none"
+  },
+  {
+    "cocktail": "Moscow Mule",
+    "name": "모스크바 뮬",
+    "abv": 11.2,
+    "ingredients": {
+      "vodka": 45,
+      "lime_juice": 15,
+      "ginger_beer": 120,
+      "ice": true,
+      "garnish": "Lime wedge"
+    },
+    "imageSrc": "none"
+  },
+  {
+    "cocktail": "Cape Codder",
+    "name": "케이프 코더",
+    "abv": 10.0,
+    "ingredients": {
+      "vodka": 50,
+      "cranberry_juice": 150,
+      "ice": true,
+      "garnish": "Lime wedge"
+    },
+    "imageSrc": "/Cape_Codder.png"
+  },
+  {
+    "cocktail": "Vodka Gimlet",
+    "name": "보드카 김렛",
+    "abv": 26.7,
+    "ingredients": {
+      "vodka": 60,
+      "lime_cordial": 15,
+      "ice": false,
+      "garnish": "Lime wedge"
+    },
+    "imageSrc": "/Vodka_Gimlet.png"
+  },
+  {
+    "cocktail": "Vodka Sour",
+    "name": "보드카 사워",
+    "abv": 20.0,
+    "ingredients": {
+      "vodka": 50,
+      "lemon_juice": 25,
+      "simple_syrup": 15,
+      "egg_white": false,
+      "ice": false,
+      "garnish": "Lemon twist"
+    },
+    "imageSrc": "/Vodka_Sour.png"
+  }
+]

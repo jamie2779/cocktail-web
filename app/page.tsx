@@ -21,6 +21,7 @@ export default function Home() {
   return (
     <Box
       width="402px"
+      height="100vh"
       margin="0 auto"
       backgroundColor="#f9f9f9"
       display="flex"
