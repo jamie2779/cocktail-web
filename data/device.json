@@ -1,3 +1,10 @@
 {
-  "availableDrinks": ["gin", "dry_vermouth", "olive", "lemon_twist", "ice"]
+  "availableDrinks": [
+    "vodka",
+    "white_rum",
+    "triple_sec",
+    "lime_juice",
+    "cranberry_juice",
+    ""
+  ]
 }

@@ -1,8 +1,8 @@
 import { Box, Text, Button, VStack, HStack } from "@chakra-ui/react";
-export default function Password() {
+export default function PasswordOverlay() {
   return (
     <Box
-      width="410px"
+      width="402px"
       margin="0 auto"
       backgroundColor="#ffffff"
       borderWidth="1px"
