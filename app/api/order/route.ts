@@ -16,48 +16,77 @@ interface DeviceData {
 interface FilteredDrinks {
   vodkaItems: DrinkItem[];
   rumItems: DrinkItem[];
+  ginItems: DrinkItem[];
   mixItems: DrinkItem[];
 }
 
 export async function GET() {
   try {
-    // 파일 경로 설정
     const menuFilePath = path.join(process.cwd(), "data", "menu.json");
     const deviceFilePath = path.join(process.cwd(), "data", "device.json");
 
-    // JSON 파일 읽기
+    // 메뉴와 디바이스 파일 읽기
     const menuData = await fs.readFile(menuFilePath, "utf8");
     const deviceData = await fs.readFile(deviceFilePath, "utf8");
 
+    // JSON 파싱
     const menu: DrinkItem[] = JSON.parse(menuData);
     const device: DeviceData = JSON.parse(deviceData);
 
+    // 사용 가능한 음료 리스트
     const availableDrinks = device.availableDrinks;
 
     // 칵테일 분류
     const filteredDrinks: FilteredDrinks = {
       vodkaItems: [],
       rumItems: [],
+      ginItems: [],
       mixItems: [],
     };
 
+    // 필터링 로직
     menu.forEach((item) => {
-      const canMake = Object.keys(item.ingredients).every((ingredient) =>
-        availableDrinks.includes(ingredient)
-      );
+      const canMake = Object.keys(item.ingredients).every((ingredient) => {
+        const normalizedIngredient = ingredient.toLowerCase();
+
+        // 가니시(garnish)와 얼음(ice)는 무조건 통과
+        if (
+          normalizedIngredient === "garnish" ||
+          normalizedIngredient === "ice"
+        ) {
+          return true;
+        }
+
+        // 나머지는 availableDrinks에 포함되어야 통과
+        return availableDrinks.includes(normalizedIngredient);
+      });
 
       if (canMake) {
-        if (item.cocktail.toLowerCase().includes("vodka")) {
+        // 음료 재료에 따라 분류
+        if (
+          Object.keys(item.ingredients).some(
+            (ingredient) => ingredient.toLowerCase() === "vodka"
+          )
+        ) {
           filteredDrinks.vodkaItems.push(item);
-        } else if (item.cocktail.toLowerCase().includes("rum")) {
+        } else if (
+          Object.keys(item.ingredients).some(
+            (ingredient) => ingredient.toLowerCase() === "white_rum"
+          )
+        ) {
           filteredDrinks.rumItems.push(item);
+        } else if (
+          Object.keys(item.ingredients).some(
+            (ingredient) => ingredient.toLowerCase() === "gin"
+          )
+        ) {
+          filteredDrinks.ginItems.push(item);
         } else {
           filteredDrinks.mixItems.push(item);
         }
       }
     });
 
-    // 데이터 반환
     return new Response(JSON.stringify(filteredDrinks), {
       headers: { "Content-Type": "application/json" },
     });

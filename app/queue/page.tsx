@@ -11,7 +11,7 @@ function Making({ item }: { item: MenuItem }) {
   return (
     <VStack flex="1" overflowY="scroll" spacing="16px" align="stretch">
       <Title category="현재 제조 중" title="금방 맛있는 칵테일이 만들어져요" />
-      <MenuList menuItems={[item]} background="#dadbe6" />
+      <MenuList menuItems={[item]} background="#dadbe6" isClickable={false} />
     </VStack>
   );
 }
@@ -67,7 +67,7 @@ export default function Queue() {
             {queue.length > 1 && (
               <>
                 <Title category="현재 대기 중" title="잠시 기다려 주세요" />
-                <MenuList menuItems={queue.slice(1)} />
+                <MenuList menuItems={queue.slice(1)} isClickable={false} />
               </>
             )}
           </>

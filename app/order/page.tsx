@@ -1,10 +1,11 @@
 "use client";
 
-import { Box, VStack, Spinner } from "@chakra-ui/react";
+import { Box, VStack, Spinner, Button } from "@chakra-ui/react";
 import Title from "@/components/Title";
 import Nav from "@/components/Nav";
 import MenuList from "@/components/MenuList";
 import Back from "@/components/Back";
+import { useRouter } from "next/navigation";
 import { useEffect, useState } from "react";
 
 interface MenuItem {
@@ -15,11 +16,30 @@ interface MenuItem {
   imageSrc: string;
 }
 
+interface MenuSectionProps {
+  title: string;
+  subtitle: string;
+  items: MenuItem[];
+}
+
+const MenuSection = ({ title, subtitle, items }: MenuSectionProps) => {
+  if (items.length === 0) return null;
+  return (
+    <>
+      <Title category={title} title={subtitle} />
+      <MenuList menuItems={items} />
+    </>
+  );
+};
+
 export default function Order() {
+  const router = useRouter();
+
   const [vodkaItems, setVodkaItems] = useState<MenuItem[]>([]);
   const [rumItems, setRumItems] = useState<MenuItem[]>([]);
+  const [ginItems, setGinItems] = useState<MenuItem[]>([]);
   const [mixItems, setMixItems] = useState<MenuItem[]>([]);
-  const [loading, setLoading] = useState(true); // 로딩 상태
+  const [loading, setLoading] = useState(true);
 
   useEffect(() => {
     const fetchMenu = async () => {
@@ -30,14 +50,14 @@ export default function Order() {
         }
 
         const data = await response.json();
-        console.log("Fetched Data:", data); // 디버깅용 출력
         setVodkaItems(data.vodkaItems || []);
         setRumItems(data.rumItems || []);
+        setGinItems(data.ginItems || []);
         setMixItems(data.mixItems || []);
       } catch (error) {
         console.error("Error fetching menu:", error);
       } finally {
-        setLoading(false); // 로딩 완료
+        setLoading(false);
       }
     };
 
@@ -76,12 +96,42 @@ export default function Order() {
         spacing="16px"
         align="stretch"
       >
-        <Title category="보드카 베이스" title="깔끔하고 시원한 칵테일이에요" />
-        <MenuList menuItems={vodkaItems} />
-        <Title category="럼 베이스" title="달콤하고 풍부한 향의 칵테일" />
-        <MenuList menuItems={rumItems} />
-        <Title category="혼합 베이스" title="특별한 시간을 위한 칵테일" />
-        <MenuList menuItems={mixItems} />
+        <MenuSection
+          title="보드카 베이스"
+          subtitle="깔끔하고 시원한 칵테일이에요"
+          items={vodkaItems}
+        />
+        <MenuSection
+          title="럼 베이스"
+          subtitle="달콤하고 풍부한 향의 칵테일"
+          items={rumItems}
+        />
+        <MenuSection
+          title="진 베이스"
+          subtitle="클래시컬하고 드라이한 칵테일"
+          items={ginItems}
+        />
+        <MenuSection
+          title="혼합 베이스"
+          subtitle="특별한 시간을 위한 칵테일"
+          items={mixItems}
+        />
+        <Title category="커스텀 칵테일" title="내가 원하는대로 만드는 칵테일" />
+        <Box display="flex" justifyContent="center" alignItems="center" pb={20}>
+          <Button
+            width="100%"
+            maxWidth="360px"
+            height="48px"
+            backgroundColor="#30336B"
+            color="white"
+            borderRadius="24px"
+            _hover={{ backgroundColor: "#2C2C69" }}
+            _active={{ backgroundColor: "#1E1E54" }}
+            onClick={() => router.push("/custom")} // /custom 경로로 이동
+          >
+            제작하기
+          </Button>
+        </Box>
       </VStack>
       <Nav />
     </Box>
