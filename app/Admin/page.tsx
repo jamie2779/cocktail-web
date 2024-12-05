@@ -1,43 +1,44 @@
 "use client";
 
-import { Box, VStack, Heading, Button } from "@chakra-ui/react";
+import { Box, VStack, Heading, Button, Select } from "@chakra-ui/react";
 import Back from "@/components/Back";
-import Setting from "@/components/Setting";
 import { useState, useEffect } from "react";
 
 export default function Admin() {
   const [availableDrinks, setAvailableDrinks] = useState<string[]>([]);
+  const [allDrinks, setAllDrinks] = useState<string[]>([]); // 드롭다운에 표시될 전체 음료 리스트
   const [isLoading, setIsLoading] = useState(true);
 
-  // Fetch the current data from the JSON file
   useEffect(() => {
-    const fetchAvailableDrinks = async () => {
+    const fetchDrinks = async () => {
       try {
         const response = await fetch("/api/admin");
         if (!response.ok) {
-          throw new Error("Failed to fetch available drinks.");
+          throw new Error("Failed to fetch drinks.");
         }
         const data = await response.json();
         setAvailableDrinks(data.availableDrinks || []);
+        setAllDrinks([
+          "vodka",
+          "white_rum",
+          "triple_sec",
+          "lime_juice",
+          "cranberry_juice",
+          "simple_syrup",
+          "gin",
+          "dry_vermouth",
+        ]);
       } catch (error) {
-        console.error("Error fetching available drinks:", error);
+        console.error("Error fetching drinks:", error);
       } finally {
         setIsLoading(false);
       }
     };
 
-    fetchAvailableDrinks();
+    fetchDrinks();
   }, []);
 
-  // Update a drink name
-  const updateDrinkName = (index: number, newName: string) => {
-    setAvailableDrinks((prev) =>
-      prev.map((drink, i) => (i === index ? newName : drink))
-    );
-  };
-
-  // Save the updated data to the JSON file
-  const saveChanges = async () => {
+  const handleSaveChanges = async () => {
     try {
       const response = await fetch("/api/admin", {
         method: "POST",
@@ -56,6 +57,14 @@ export default function Admin() {
       console.error("Error saving changes:", error);
       alert("Failed to save changes.");
     }
+  };
+
+  const handleDrinkChange = (index: number, newDrink: string) => {
+    setAvailableDrinks((prev) => {
+      const updated = [...prev];
+      updated[index] = newDrink;
+      return updated;
+    });
   };
 
   if (isLoading) {
@@ -95,19 +104,29 @@ export default function Admin() {
         >
           <Box ml="10px" mb="10px">
             <Heading as="h2" fontSize="16px" fontWeight="bold" textAlign="left">
-              {"베이스 설정"}
+              {"음료 설정"}
             </Heading>
           </Box>
           {availableDrinks.map((drink, index) => (
-            <Setting
-              key={index}
-              name={drink}
-              onNameChange={(newName) => updateDrinkName(index, newName)}
-            />
+            <Box key={index} display="flex" alignItems="center" padding="8px">
+              <Select
+                value={drink}
+                onChange={(e) => handleDrinkChange(index, e.target.value)}
+                placeholder="음료 선택"
+                backgroundColor="#FFFEFA"
+                borderRadius="8px"
+              >
+                {allDrinks.map((option, i) => (
+                  <option key={i} value={option}>
+                    {option}
+                  </option>
+                ))}
+              </Select>
+            </Box>
           ))}
         </VStack>
       </Box>
-      <Button margin="16px" colorScheme="blue" onClick={saveChanges}>
+      <Button margin="16px" colorScheme="blue" onClick={handleSaveChanges}>
         Save Changes
       </Button>
     </Box>
