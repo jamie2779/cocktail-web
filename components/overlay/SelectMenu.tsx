@@ -11,6 +11,39 @@ export default function SelectMenu({
   onOrderClick?: () => void; // 주문하기 클릭 핸들러
   onCloseClick?: () => void; // 닫기 클릭 핸들러
 }) {
+  // 주문하기 클릭 핸들러
+  const handleOrderClick = async () => {
+    const orderData = {
+      cocktail: menuItem.cocktail,
+      name: menuItem.name,
+      abv: menuItem.abv,
+      ingredients: menuItem.ingredients,
+      imageSrc: menuItem.imageSrc,
+    };
+
+    // 주문 데이터를 API로 전송하여 큐에 추가
+    try {
+      const response = await fetch("/api/queue", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({ item: orderData }),
+      });
+
+      if (response.ok) {
+        console.log("주문이 큐에 추가되었습니다.");
+      } else {
+        console.error("주문 추가 실패");
+      }
+    } catch (error) {
+      console.error("주문 처리 중 에러 발생:", error);
+    }
+
+    // 추가적인 동작 (예: 닫기 버튼 클릭 처리 등)
+    if (onOrderClick) onOrderClick();
+  };
+
   return (
     <Box
       position="fixed"
@@ -112,7 +145,7 @@ export default function SelectMenu({
             height="50px"
             backgroundColor="#30336B"
             color="white"
-            onClick={onOrderClick}
+            onClick={handleOrderClick} // 주문하기 클릭 핸들러
             _hover={{ backgroundColor: "#2C2C69" }}
           >
             주문하기

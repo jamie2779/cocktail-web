@@ -9,7 +9,7 @@ import { useEffect, useState } from "react";
 
 function Making({ item }: { item: MenuItem }) {
   return (
-    <VStack flex="1" overflowY="scroll" spacing="16px" align="stretch">
+    <VStack flex="1" align="stretch">
       <Title category="현재 제조 중" title="금방 맛있는 칵테일이 만들어져요" />
       <MenuList menuItems={[item]} background="#dadbe6" isClickable={false} />
     </VStack>
@@ -54,20 +54,21 @@ export default function Queue() {
       flexDirection="column"
     >
       <Back />
-      <VStack
-        flex="1"
-        overflowY="scroll"
-        margin="24px"
-        spacing="16px"
-        align="stretch"
-      >
+      <VStack flex="1" overflowY="auto" margin="24px" align="stretch">
         {queue.length > 0 ? (
           <>
+            {/* 제조중 부분 */}
             <Making item={queue[0]} />
             {queue.length > 1 && (
               <>
+                {/* 대기 중 목록 */}
                 <Title category="현재 대기 중" title="잠시 기다려 주세요" />
-                <MenuList menuItems={queue.slice(1)} isClickable={false} />
+                <Box
+                  maxHeight="calc(100vh - 300px)" // 제조중 영역과 적절히 분리
+                  overflowY="auto" // 대기 목록이 길어질 경우 스크롤 발생
+                >
+                  <MenuList menuItems={queue.slice(1)} isClickable={false} />
+                </Box>
               </>
             )}
           </>

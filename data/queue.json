@@ -16,7 +16,7 @@
   {
     "cocktail": "Cape Codder",
     "name": "케이프 코더",
-    "abv": 10.0,
+    "abv": 10,
     "ingredients": {
       "vodka": 50,
       "cranberry_juice": 150,
@@ -38,5 +38,25 @@
       "garnish": "Lime wedge"
     },
     "imageSrc": "/Cosmopolitan.png"
+  },
+  {
+    "cocktail": "Kamikaze",
+    "name": "카미카제",
+    "abv": 26.7,
+    "ingredients": {
+      "vodka": 60,
+      "triple_sec": 30,
+      "lime_juice": 30,
+      "ice": false,
+      "garnish": "Lime wedge"
+    },
+    "imageSrc": "none"
+  },
+  {
+    "cocktail": "Custom Cocktail",
+    "name": "커스텀 칵테일",
+    "abv": 0,
+    "ingredients": {},
+    "imageSrc": "none"
   }
 ]
