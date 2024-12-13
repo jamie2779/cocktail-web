@@ -30,9 +30,11 @@ const Menu = ({ imageSrc, name, description, abv }: MenuProps) => {
         <Text fontSize="18px" fontWeight="semibold" lineHeight="1.2">
           {name}
         </Text>
-        <Text fontSize="13px" color="#7174BE">
-          ABV {abv}%
-        </Text>
+        {abv !== -1 && (
+          <Text fontSize="13px" color="#7174BE">
+            ABV {abv}%
+          </Text>
+        )}
       </VStack>
     </Box>
   );

@@ -26,7 +26,7 @@ export default function CustomCocktail({
     setIngredients((prev) =>
       prev.map((ingredient, i) =>
         i === index
-          ? { ...ingredient, amount: ingredient.amount + 10 }
+          ? { ...ingredient, amount: ingredient.amount + 30 }
           : ingredient
       )
     );
@@ -36,7 +36,7 @@ export default function CustomCocktail({
     setIngredients((prev) =>
       prev.map((ingredient, i) =>
         i === index && ingredient.amount > 0
-          ? { ...ingredient, amount: ingredient.amount - 10 }
+          ? { ...ingredient, amount: ingredient.amount - 30 }
           : ingredient
       )
     );
@@ -46,7 +46,7 @@ export default function CustomCocktail({
     const customCocktailData = {
       cocktail: "Custom Cocktail", // 커스텀 칵테일 이름
       name: "커스텀 칵테일", // 사용자 지정 칵테일 이름
-      abv: 0,
+      abv: -1,
       ingredients: ingredients.reduce(
         (acc: { [key: string]: number }, { name, amount }) => {
           if (amount > 0) acc[name] = amount; // 양이 0보다 큰 재료만 포함
@@ -56,6 +56,23 @@ export default function CustomCocktail({
       ),
       imageSrc: "none",
     };
+
+    // 주문할 재료가 없으면 주문 불가
+    if (Object.keys(customCocktailData.ingredients).length === 0) {
+      setOrderStatus("재료를 추가해야 주문할 수 있습니다.");
+      return;
+    }
+
+    // 300ml 이상 주문할 수 없음
+    const totalAmount = Object.values(customCocktailData.ingredients).reduce(
+      (sum, amount) => sum + amount,
+      0
+    );
+
+    if (totalAmount > 300) {
+      setOrderStatus("총 용량은 300ml를 초과할 수 없습니다.");
+      return;
+    }
 
     // 큐에 주문을 보냄
     try {
