@@ -1,7 +1,15 @@
 import { Text, Button, VStack } from "@chakra-ui/react";
+import { useRouter } from "next/navigation";
 import OverlayContainer from "./OverlayContainer";
 
 export default function CompleteOverlay({ onClose }: { onClose: () => void }) {
+  const router = useRouter();
+
+  const handleClose = () => {
+    onClose();
+    router.push("/queue");
+  };
+
   return (
     <OverlayContainer>
       <VStack flex="1" spacing="16px" align="stretch">
@@ -22,7 +30,7 @@ export default function CompleteOverlay({ onClose }: { onClose: () => void }) {
           height="50px"
           variant="outline"
           color="#2A2A2A"
-          onClick={onClose}
+          onClick={handleClose}
         >
           닫기
         </Button>

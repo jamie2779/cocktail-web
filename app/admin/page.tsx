@@ -1,6 +1,13 @@
 "use client";
 
-import { Box, VStack, Heading, Button, Select } from "@chakra-ui/react";
+import {
+  Box,
+  VStack,
+  Heading,
+  Button,
+  Select,
+  useToast,
+} from "@chakra-ui/react";
 import Back from "@/components/Back";
 import { useState, useEffect } from "react";
 
@@ -8,6 +15,7 @@ export default function Admin() {
   const [availableDrinks, setAvailableDrinks] = useState<string[]>([]);
   const [allDrinks, setAllDrinks] = useState<string[]>([]); // 드롭다운에 표시될 전체 음료 리스트
   const [isLoading, setIsLoading] = useState(true);
+  const toast = useToast(); // toast 훅을 사용
 
   useEffect(() => {
     const fetchDrinks = async () => {
@@ -30,13 +38,20 @@ export default function Admin() {
         ]);
       } catch (error) {
         console.error("Error fetching drinks:", error);
+        toast({
+          title: "에러 발생",
+          description: "음료 정보를 불러오는 데 실패했습니다.",
+          status: "error",
+          duration: 3000,
+          isClosable: true,
+        });
       } finally {
         setIsLoading(false);
       }
     };
 
     fetchDrinks();
-  }, []);
+  }, [toast]);
 
   const handleSaveChanges = async () => {
     try {
@@ -52,10 +67,22 @@ export default function Admin() {
         throw new Error("Failed to save changes.");
       }
 
-      alert("Changes saved successfully!");
+      toast({
+        title: "변경 사항 저장 성공",
+        description: "음료 설정이 성공적으로 저장되었습니다.",
+        status: "success",
+        duration: 3000,
+        isClosable: true,
+      });
     } catch (error) {
       console.error("Error saving changes:", error);
-      alert("Failed to save changes.");
+      toast({
+        title: "저장 실패",
+        description: "변경 사항 저장에 실패했습니다. 다시 시도해 주세요.",
+        status: "error",
+        duration: 3000,
+        isClosable: true,
+      });
     }
   };
 
