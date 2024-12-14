@@ -13,7 +13,7 @@ import { useState, useEffect } from "react";
 
 export default function Admin() {
     const [availableDrinks, setAvailableDrinks] = useState<string[]>([]);
-    const [allDrinks, setAllDrinks] = useState<string[]>([]); // 드롭다운에 표시될 전체 음료 리스트
+    const [allDrinks, setAllDrinks] = useState<Record<string, string>>({});
     const [isLoading, setIsLoading] = useState(true);
     const toast = useToast(); // toast 훅 사용
 
@@ -26,16 +26,14 @@ export default function Admin() {
                 }
                 const data = await response.json();
                 setAvailableDrinks(data.availableDrinks || []);
-                setAllDrinks([
-                    "vodka",
-                    "white_rum",
-                    "triple_sec",
-                    "lime_juice",
-                    "cranberry_juice",
-                    "simple_syrup",
-                    "gin",
-                    "dry_vermouth",
-                ]);
+
+                const liquorResponse = await fetch("/api/liquor");
+                if (!response.ok) {
+                    throw new Error("Failed to fetch drinks.");
+                }
+                const liquors = await liquorResponse.json();
+
+                setAllDrinks(liquors);
             } catch (error) {
                 console.error("Error fetching drinks:", error);
                 toast({
@@ -106,7 +104,10 @@ export default function Admin() {
             }
 
             await fetch("/api/queue", {
-                method: "DELETE"
+                method: "DELETE",
+                headers: {
+                    "Content-Type": "application/json",
+                },
             });
 
             toast({
@@ -269,11 +270,13 @@ export default function Admin() {
                                 backgroundColor="#FFFEFA"
                                 borderRadius="8px"
                             >
-                                {allDrinks.map((option, i) => (
-                                    <option key={i} value={option}>
-                                        {option}
-                                    </option>
-                                ))}
+                                {Object.entries(allDrinks).map(
+                                    ([key, value], i) => (
+                                        <option key={i} value={key}>
+                                            {value}
+                                        </option>
+                                    )
+                                )}
                             </Select>
                         </Box>
                     ))}
