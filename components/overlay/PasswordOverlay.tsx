@@ -49,6 +49,12 @@ export default function PasswordOverlay({ onClose }: { onClose: () => void }) {
     }
   };
 
+  const handleKeyPress = (e: React.KeyboardEvent<HTMLInputElement>) => {
+    if (e.key === "Enter") {
+      handleConfirm();
+    }
+  };
+
   return (
     <Box
       width="402px"
@@ -75,6 +81,7 @@ export default function PasswordOverlay({ onClose }: { onClose: () => void }) {
             placeholder="비밀번호"
             value={password}
             onChange={(e) => setPassword(e.target.value)}
+            onKeyDown={handleKeyPress}
             width="100%"
             textAlign="center"
           />
