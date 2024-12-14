@@ -1,16 +1,1 @@
-[
-  {
-    "cocktail": "Gin Fizz",
-    "name": "진 피즈",
-    "abv": 18,
-    "ingredients": {
-      "gin": 60,
-      "lemon_juice": 30,
-      "simple_syrup": 30,
-      "soda_water": 30,
-      "ice": false,
-      "garnish": "Lemon slice"
-    },
-    "imageSrc": "/cocktail/gin-fizz.jpg"
-  }
-]
+[]

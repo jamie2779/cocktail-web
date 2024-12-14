@@ -17,7 +17,21 @@ export default function CustomPage() {
           throw new Error("Failed to fetch ingredients.");
         }
         const data = await response.json();
-        setIngredients(data.availableDrinks || []);
+        const englishIngredients = data.availableDrinks || [];
+
+        // /api/liquor로 얻은 영어->한국어 매핑 데이터 호출
+        const liquorResponse = await fetch("/api/liquor");
+        if (!liquorResponse.ok) {
+          throw new Error("Failed to fetch liquor translation data.");
+        }
+        const liquorData = await liquorResponse.json();
+
+        // 영어 이름을 한국어 이름으로 변환
+        const koreanIngredients = englishIngredients.map((ingredient) => {
+          return liquorData[ingredient] || ingredient; // 매핑된 한국어 이름이 없으면 영어 이름 그대로 사용
+        });
+
+        setIngredients(koreanIngredients); // 한국어 이름 배열 저장
       } catch (error) {
         console.error("Error fetching ingredients:", error);
       } finally {
