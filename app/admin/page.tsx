@@ -15,7 +15,7 @@ export default function Admin() {
     const [availableDrinks, setAvailableDrinks] = useState<string[]>([]);
     const [allDrinks, setAllDrinks] = useState<string[]>([]); // 드롭다운에 표시될 전체 음료 리스트
     const [isLoading, setIsLoading] = useState(true);
-    const toast = useToast(); // toast 훅을 사용
+    const toast = useToast(); // toast 훅 사용
 
     useEffect(() => {
         const fetchDrinks = async () => {
@@ -53,8 +53,46 @@ export default function Admin() {
         fetchDrinks();
     }, [toast]);
 
+    // 하드웨어 상태 체크 함수
+    const checkHardwareStatus = async (): Promise<string> => {
+        const getResponse = await fetch("/api/hardware", {
+            method: "GET",
+        });
+
+        if (!getResponse.ok) {
+            throw new Error("Failed to check hardware status.");
+        }
+
+        const status = await getResponse.json();
+        return status;
+    };
+
+    // 음료 설정 저장 함수
     const handleSaveChanges = async () => {
         try {
+            // 하드웨어 상태 체크
+            const status = await checkHardwareStatus();
+            if (status === "disconnect") {
+                toast({
+                    title: "하드웨어 연결 오류",
+                    description: "하드웨어가 연결되지 않았습니다.",
+                    status: "error",
+                    duration: 3000,
+                    isClosable: true,
+                });
+                return;
+            } else if (status === "working") {
+                toast({
+                    title: "이미 작동 중입니다",
+                    description:
+                        "현재 하드웨어가 작동 중이므로 설정을 변경할 수 없습니다.",
+                    status: "error",
+                    duration: 3000,
+                    isClosable: true,
+                });
+                return;
+            }
+
             const response = await fetch("/api/admin", {
                 method: "POST",
                 headers: {
@@ -97,16 +135,8 @@ export default function Admin() {
 
     const sendMoveCommand = async (moveNumber: number) => {
         try {
-            // Step 1: API GET 요청으로 상태 확인
-            const getResponse = await fetch("/api/hardware", {
-                method: "GET",
-            });
-
-            if (!getResponse.ok) {
-                throw new Error("Failed to check hardware status.");
-            }
-
-            const status = await getResponse.json();
+            // 하드웨어 상태 체크
+            const status = await checkHardwareStatus();
 
             if (status === "disconnect") {
                 // 상태가 'disconnect'이면 하드웨어 연결 문제로 간주
@@ -120,8 +150,8 @@ export default function Admin() {
                 return; // 함수 종료
             }
 
-            if (status == "working") {
-                // 상태가 'working'이면 이미 작동 중인 것으로 간주
+            if (status === "working") {
+                // 상태가 'working'이면 이미 작동 중
                 toast({
                     title: "이미 작동 중입니다",
                     description:
@@ -133,7 +163,7 @@ export default function Admin() {
                 return; // 함수 종료
             }
 
-            // Step 2: 상태가 'working'이 아니니면 POST 요청으로 이동 명령 전송
+            // 상태가 정상적이면 명령 전송
             const postResponse = await fetch("/api/hardware", {
                 method: "POST",
                 headers: {
@@ -214,7 +244,11 @@ export default function Admin() {
                         >
                             {"음료 설정"}
                         </Heading>
+                        <Box color="red" fontSize="14px">
+                            대기 중인 음료는 취소됩니다
+                        </Box>
                     </Box>
+
                     {availableDrinks.map((drink, index) => (
                         <Box
                             key={index}
@@ -269,8 +303,8 @@ export default function Admin() {
                             key={command}
                             colorScheme="teal"
                             onClick={() => sendMoveCommand(command)}
-                            flex="1" // 동일한 너비
-                            marginX="4px" // 버튼 사이의 간격 조정
+                            flex="1"
+                            marginX="4px"
                         >
                             {label}
                         </Button>
@@ -289,8 +323,8 @@ export default function Admin() {
                             key={number}
                             colorScheme="teal"
                             onClick={() => sendMoveCommand(number)}
-                            flex="1" // 동일한 너비
-                            marginX="4px" // 버튼 사이의 간격 조정
+                            flex="1"
+                            marginX="4px"
                         >
                             {`이동 ${number}`}
                         </Button>
@@ -304,8 +338,8 @@ export default function Admin() {
                             key={number}
                             colorScheme="teal"
                             onClick={() => sendMoveCommand(number)}
-                            flex="1" // 동일한 너비
-                            marginX="4px" // 버튼 사이의 간격 조정
+                            flex="1"
+                            marginX="4px"
                         >
                             {`이동 ${number}`}
                         </Button>
