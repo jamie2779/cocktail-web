@@ -27,7 +27,7 @@ export default function CustomPage() {
         const liquorData = await liquorResponse.json();
 
         // 영어 이름을 한국어 이름으로 변환
-        const koreanIngredients = englishIngredients.map((ingredient) => {
+        const koreanIngredients = englishIngredients.map((ingredient: string) => {
           return liquorData[ingredient] || ingredient; // 매핑된 한국어 이름이 없으면 영어 이름 그대로 사용
         });
 
