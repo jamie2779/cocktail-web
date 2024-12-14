@@ -42,7 +42,7 @@ export default function Home() {
           cursor="pointer"
           onClick={() => handleNavigation("/admin")}
         >
-          <Image src={"/User.png"} alt={"user"} width={40} height={50} />
+          <Image src={"/User.png"} alt={"user"} width={30} height={40} />
         </IconButton>
       </Flex>
       <VStack
@@ -65,6 +65,8 @@ export default function Home() {
             backgroundColor="#787eff"
             marginTop={85}
             marginBottom={120}
+            boxShadow="0px 4px 12px rgba(0, 0, 0, 0.1)"
+            borderRadius="10px"
             onClick={() => handleNavigation("/order")}
           >
             <VStack>
