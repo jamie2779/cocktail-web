@@ -105,6 +105,10 @@ export default function Admin() {
                 throw new Error("Failed to save changes.");
             }
 
+            await fetch("/api/queue", {
+                method: "DELETE"
+            });
+
             toast({
                 title: "변경 사항 저장 성공",
                 description: "음료 설정이 성공적으로 저장되었습니다.",
