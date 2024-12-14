@@ -58,5 +58,33 @@
     "abv": 0,
     "ingredients": {},
     "imageSrc": "none"
+  },
+  {
+    "cocktail": "Cosmopolitan",
+    "name": "코스모폴리탄",
+    "abv": 20.3,
+    "ingredients": {
+      "vodka": 90,
+      "triple_sec": 30,
+      "cranberry_juice": 30,
+      "lime_juice": 30,
+      "ice": false,
+      "garnish": "Lime wedge"
+    },
+    "imageSrc": "/Cosmopolitan.png"
+  },
+  {
+    "cocktail": "Cosmopolitan",
+    "name": "코스모폴리탄",
+    "abv": 20.3,
+    "ingredients": {
+      "vodka": 90,
+      "triple_sec": 30,
+      "cranberry_juice": 30,
+      "lime_juice": 30,
+      "ice": false,
+      "garnish": "Lime wedge"
+    },
+    "imageSrc": "/Cosmopolitan.png"
   }
 ]
