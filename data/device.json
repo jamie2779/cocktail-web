@@ -1,10 +1,10 @@
 {
   "availableDrinks": [
-    "vodka",
-    "white_rum",
-    "triple_sec",
+    "gin",
+    "simple_syrup",
     "lime_juice",
-    "cranberry_juice",
-    "lime_juice"
+    "lemon_juice",
+    "vodka",
+    "soda_water"
   ]
 }

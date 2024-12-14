@@ -7,18 +7,18 @@
       "gin": 90,
       "dry_vermouth": 30,
       "ice": false,
-      "garnish": "Olive or lemon twist"
+      "garnish": "Olive"
     },
     "imageSrc": "none"
   },
   {
     "cocktail": "Manhattan",
     "name": "맨해튼",
-    "abv": 31.0,
+    "abv": 33.0,
     "ingredients": {
       "rye_whiskey": 90,
       "sweet_vermouth": 30,
-      "angostura_bitters": 6,
+      "bitters": 30,
       "ice": false,
       "garnish": "Cherry"
     },
@@ -27,7 +27,7 @@
   {
     "cocktail": "Negroni",
     "name": "네그로니",
-    "abv": 24.0,
+    "abv": 28.0,
     "ingredients": {
       "gin": 30,
       "campari": 30,
@@ -38,172 +38,857 @@
     "imageSrc": "none"
   },
   {
-    "cocktail": "Daiquiri",
-    "name": "다이키리",
-    "abv": 25.0,
+    "cocktail": "Old Fashioned",
+    "name": "올드 패션드",
+    "abv": 33.0,
     "ingredients": {
-      "white_rum": 90,
-      "lime_juice": 30,
+      "bourbon": 90,
       "simple_syrup": 30,
-      "ice": false,
-      "garnish": "Lime wheel"
-    },
-    "imageSrc": "/Daiquiri.png"
-  },
-  {
-    "cocktail": "Margarita",
-    "name": "마르가리타",
-    "abv": 27.0,
-    "ingredients": {
-      "tequila": 90,
-      "triple_sec": 30,
-      "lime_juice": 30,
-      "ice": false,
-      "garnish": "Salt rim and lime wedge"
+      "bitters": 30,
+      "ice": true,
+      "garnish": "Orange twist"
     },
     "imageSrc": "none"
   },
   {
-    "cocktail": "Cosmopolitan",
-    "name": "코스모폴리탄",
-    "abv": 20.3,
+    "cocktail": "Margarita",
+    "name": "마가리타",
+    "abv": 26.0,
     "ingredients": {
-      "vodka": 90,
+      "tequila": 60,
       "triple_sec": 30,
-      "cranberry_juice": 30,
       "lime_juice": 30,
       "ice": false,
-      "garnish": "Lime wedge"
+      "garnish": "Lime wheel"
     },
-    "imageSrc": "/Cosmopolitan.png"
+    "imageSrc": "none"
   },
   {
-    "cocktail": "Pina Colada",
-    "name": "피나 콜라다",
-    "abv": 13.0,
+    "cocktail": "Margarita",
+    "name": "마가리타",
+    "abv": 26.0,
+    "ingredients": {
+      "tequila": 60,
+      "orange_curaçao": 30,
+      "lime_juice": 30,
+      "ice": false,
+      "garnish": "Lime wheel"
+    },
+    "imageSrc": "none"
+  },
+  {
+    "cocktail": "Margarita",
+    "name": "마가리타",
+    "abv": 26.0,
+    "ingredients": {
+      "tequila": 60,
+      "grand_marnier": 30,
+      "lime_juice": 30,
+      "ice": false,
+      "garnish": "Lime wheel"
+    },
+    "imageSrc": "none"
+  },
+  {
+    "cocktail": "Daiquiri",
+    "name": "다이키리",
+    "abv": 27.0,
     "ingredients": {
       "white_rum": 60,
-      "coconut_cream": 90,
-      "pineapple_juice": 90,
-      "ice": true,
-      "garnish": "Pineapple wedge and cherry"
+      "lime_juice": 30,
+      "simple_syrup": 30,
+      "ice": false,
+      "garnish": "Lime twist"
+    },
+    "imageSrc": "none"
+  },
+  {
+    "cocktail": "Daiquiri",
+    "name": "다이키리",
+    "abv": 27.0,
+    "ingredients": {
+      "white_rum": 60,
+      "lime_juice": 30,
+      "agave_syrup": 30,
+      "ice": false,
+      "garnish": "Lime twist"
     },
     "imageSrc": "none"
   },
   {
     "cocktail": "Sidecar",
     "name": "사이드카",
-    "abv": 27.0,
+    "abv": 32.0,
     "ingredients": {
-      "cognac": 90,
+      "cognac": 60,
       "triple_sec": 30,
       "lemon_juice": 30,
       "ice": false,
-      "garnish": "Sugar rim and lemon twist"
+      "garnish": "Orange twist"
     },
     "imageSrc": "none"
   },
   {
-    "cocktail": "Moscow Mule",
-    "name": "모스크바 뮬",
-    "abv": 11.2,
+    "cocktail": "Sidecar",
+    "name": "사이드카",
+    "abv": 32.0,
     "ingredients": {
-      "vodka": 60,
-      "lime_juice": 30,
-      "ginger_beer": 120,
-      "ice": true,
-      "garnish": "Lime wedge"
-    },
-    "imageSrc": "none"
-  },
-  {
-    "cocktail": "Cape Codder",
-    "name": "케이프 코더",
-    "abv": 10.0,
-    "ingredients": {
-      "vodka": 60,
-      "cranberry_juice": 120,
-      "ice": true,
-      "garnish": "Lime wedge"
-    },
-    "imageSrc": "/Cape_Codder.png"
-  },
-  {
-    "cocktail": "Vodka Gimlet",
-    "name": "보드카 김렛",
-    "abv": 26.7,
-    "ingredients": {
-      "vodka": 90,
-      "lime_juice": 30,
+      "cognac": 60,
+      "orange_curaçao": 30,
+      "lemon_juice": 30,
       "ice": false,
-      "garnish": "Lime wedge"
+      "garnish": "Orange twist"
     },
-    "imageSrc": "/Vodka_Gimlet.png"
+    "imageSrc": "none"
   },
   {
-    "cocktail": "Vodka Sour",
-    "name": "보드카 사워",
-    "abv": 20.0,
+    "cocktail": "Sidecar",
+    "name": "사이드카",
+    "abv": 32.0,
     "ingredients": {
-      "vodka": 90,
+      "cognac": 60,
+      "grand_marnier": 30,
+      "lemon_juice": 30,
+      "ice": false,
+      "garnish": "Orange twist"
+    },
+    "imageSrc": "none"
+  },
+  {
+    "cocktail": "Whiskey Sour",
+    "name": "위스키 사워",
+    "abv": 24.0,
+    "ingredients": {
+      "bourbon": 60,
       "lemon_juice": 30,
       "simple_syrup": 30,
-      "egg_white": false,
       "ice": false,
-      "garnish": "Lemon twist"
+      "garnish": "Cherry"
     },
-    "imageSrc": "/Vodka_Sour.png"
+    "imageSrc": "none"
   },
   {
-    "cocktail": "Kamikaze",
-    "name": "카미카제",
-    "abv": 26.7,
+    "cocktail": "Whiskey Sour",
+    "name": "위스키 사워",
+    "abv": 24.0,
+    "ingredients": {
+      "bourbon": 60,
+      "lemon_juice": 30,
+      "honey_syrup": 30,
+      "ice": false,
+      "garnish": "Cherry"
+    },
+    "imageSrc": "none"
+  },
+  {
+    "cocktail": "White Russian",
+    "name": "화이트 러시안",
+    "abv": 20.0,
+    "ingredients": {
+      "vodka": 30,
+      "coffee_liqueur": 30,
+      "cream": 30,
+      "ice": true,
+      "garnish": ""
+    },
+    "imageSrc": "none"
+  },
+  {
+    "cocktail": "Black Russian",
+    "name": "블랙 러시안",
+    "abv": 28.0,
+    "ingredients": {
+      "vodka": 60,
+      "coffee_liqueur": 30,
+      "ice": true,
+      "garnish": ""
+    },
+    "imageSrc": "none"
+  },
+  {
+    "cocktail": "Cosmopolitan",
+    "name": "코스모폴리탄",
+    "abv": 24.0,
     "ingredients": {
       "vodka": 60,
       "triple_sec": 30,
-      "lime_juice": 30,
-      "ice": false,
-      "garnish": "Lime wedge"
-    },
-    "imageSrc": "none"
-  },
-  {
-    "cocktail": "Rum Gimlet",
-    "name": "럼 김렛",
-    "abv": 26.7,
-    "ingredients": {
-      "white_rum": 90,
-      "lime_juice": 30,
-      "ice": false,
-      "garnish": "Lime wedge"
-    },
-    "imageSrc": "none"
-  },
-  {
-    "cocktail": "Rum Sour",
-    "name": "럼 사워",
-    "abv": 20.0,
-    "ingredients": {
-      "white_rum": 90,
-      "lemon_juice": 30,
-      "simple_syrup": 30,
-      "egg_white": false,
-      "ice": false,
-      "garnish": "Lemon twist"
-    },
-    "imageSrc": "none"
-  },
-  {
-    "cocktail": "Cranberry Daiquiri",
-    "name": "크랜베리 다이키리",
-    "abv": 17.1,
-    "ingredients": {
-      "white_rum": 90,
       "cranberry_juice": 30,
       "lime_juice": 30,
+      "ice": false,
+      "garnish": "Lime wedge"
+    },
+    "imageSrc": "none"
+  },
+  {
+    "cocktail": "Cosmopolitan",
+    "name": "코스모폴리탄",
+    "abv": 24.0,
+    "ingredients": {
+      "vodka": 60,
+      "orange_curaçao": 30,
+      "cranberry_juice": 30,
+      "lime_juice": 30,
+      "ice": false,
+      "garnish": "Lime wedge"
+    },
+    "imageSrc": "none"
+  },
+  {
+    "cocktail": "Cosmopolitan",
+    "name": "코스모폴리탄",
+    "abv": 24.0,
+    "ingredients": {
+      "vodka": 60,
+      "grand_marnier": 30,
+      "cranberry_juice": 30,
+      "lime_juice": 30,
+      "ice": false,
+      "garnish": "Lime wedge"
+    },
+    "imageSrc": "none"
+  },
+  {
+    "cocktail": "Tom Collins",
+    "name": "톰 콜린스",
+    "abv": 17.0,
+    "ingredients": {
+      "gin": 60,
+      "lemon_juice": 30,
+      "simple_syrup": 30,
+      "soda_water": 30,
+      "ice": true,
+      "garnish": "Lemon slice"
+    },
+    "imageSrc": "none"
+  },
+  {
+    "cocktail": "Gimlet",
+    "name": "김렛",
+    "abv": 31.0,
+    "ingredients": {
+      "gin": 90,
+      "lime_juice": 30,
       "simple_syrup": 30,
       "ice": false,
-      "garnish": "Lime wheel"
+      "garnish": "Lime wedge"
+    },
+    "imageSrc": "none"
+  },
+  {
+    "cocktail": "Mai Tai",
+    "name": "마이 타이",
+    "abv": 26.0,
+    "ingredients": {
+      "white_rum": 30,
+      "dark_rum": 30,
+      "orange_curaçao": 30,
+      "lime_juice": 30,
+      "orgeat_syrup": 30,
+      "ice": true,
+      "garnish": "Mint sprig"
+    },
+    "imageSrc": "none"
+  },
+  {
+    "cocktail": "Mai Tai",
+    "name": "마이 타이",
+    "abv": 26.0,
+    "ingredients": {
+      "white_rum": 30,
+      "dark_rum": 30,
+      "triple_sec": 30,
+      "lime_juice": 30,
+      "orgeat_syrup": 30,
+      "ice": true,
+      "garnish": "Mint sprig"
+    },
+    "imageSrc": "none"
+  },
+  {
+    "cocktail": "Mai Tai",
+    "name": "마이 타이",
+    "abv": 26.0,
+    "ingredients": {
+      "white_rum": 30,
+      "dark_rum": 30,
+      "grand_marnier": 30,
+      "lime_juice": 30,
+      "orgeat_syrup": 30,
+      "ice": true,
+      "garnish": "Mint sprig"
+    },
+    "imageSrc": "none"
+  },
+  {
+    "cocktail": "Mojito",
+    "name": "모히토",
+    "abv": 18.0,
+    "ingredients": {
+      "white_rum": 60,
+      "lime_juice": 30,
+      "simple_syrup": 30,
+      "soda_water": 30,
+      "ice": true,
+      "garnish": "Mint leaves"
+    },
+    "imageSrc": "none"
+  },
+  {
+    "cocktail": "Long Island Iced Tea",
+    "name": "롱 아일랜드 아이스 티",
+    "abv": 28.0,
+    "ingredients": {
+      "vodka": 30,
+      "tequila": 30,
+      "white_rum": 30,
+      "gin": 30,
+      "triple_sec": 30,
+      "lemon_juice": 30,
+      "simple_syrup": 30,
+      "cola": 30,
+      "ice": true,
+      "garnish": "Lemon wedge"
+    },
+    "imageSrc": "none"
+  },
+  {
+    "cocktail": "Sazerac",
+    "name": "사제락",
+    "abv": 36.0,
+    "ingredients": {
+      "rye_whiskey": 90,
+      "absinthe": 30,
+      "simple_syrup": 30,
+      "bitters": 30,
+      "ice": false,
+      "garnish": "Lemon twist"
+    },
+    "imageSrc": "none"
+  },
+  {
+    "cocktail": "Boulevardier",
+    "name": "불러바디에",
+    "abv": 28.0,
+    "ingredients": {
+      "bourbon": 30,
+      "campari": 30,
+      "sweet_vermouth": 30,
+      "ice": true,
+      "garnish": "Orange peel"
+    },
+    "imageSrc": "none"
+  },
+  {
+    "cocktail": "Hanky Panky",
+    "name": "핸키 팽키",
+    "abv": 28.0,
+    "ingredients": {
+      "gin": 60,
+      "sweet_vermouth": 60,
+      "fernet_branca": 30,
+      "ice": false,
+      "garnish": "Orange peel"
+    },
+    "imageSrc": "none"
+  },
+  {
+    "cocktail": "Aviation",
+    "name": "에비에이션",
+    "abv": 27.0,
+    "ingredients": {
+      "gin": 60,
+      "maraschino_liqueur": 30,
+      "lemon_juice": 30,
+      "creme_de_violette": 30,
+      "ice": false,
+      "garnish": "Cherry"
+    },
+    "imageSrc": "none"
+  },
+  {
+    "cocktail": "Vesper",
+    "name": "베스퍼",
+    "abv": 35.0,
+    "ingredients": {
+      "gin": 60,
+      "vodka": 30,
+      "lillet_blanc": 30,
+      "ice": false,
+      "garnish": "Lemon twist"
+    },
+    "imageSrc": "none"
+  },
+  {
+    "cocktail": "Rusty Nail",
+    "name": "러스티 네일",
+    "abv": 33.0,
+    "ingredients": {
+      "scotch": 60,
+      "drambuie": 30,
+      "ice": true,
+      "garnish": "Lemon twist"
+    },
+    "imageSrc": "none"
+  },
+  {
+    "cocktail": "Godfather",
+    "name": "갓파더",
+    "abv": 33.0,
+    "ingredients": {
+      "scotch": 60,
+      "amaretto": 30,
+      "ice": true,
+      "garnish": ""
+    },
+    "imageSrc": "none"
+  },
+  {
+    "cocktail": "Bloody Mary",
+    "name": "블러디 메리",
+    "abv": 15.0,
+    "ingredients": {
+      "vodka": 60,
+      "tomato_juice": 90,
+      "lemon_juice": 30,
+      "worcestershire_sauce": 30,
+      "ice": true,
+      "garnish": "Celery stalk"
+    },
+    "imageSrc": "none"
+  },
+  {
+    "cocktail": "Espresso Martini",
+    "name": "에스프레소 마티니",
+    "abv": 24.0,
+    "ingredients": {
+      "vodka": 60,
+      "coffee_liqueur": 30,
+      "espresso": 30,
+      "simple_syrup": 30,
+      "ice": false,
+      "garnish": "Coffee beans"
+    },
+    "imageSrc": "none"
+  },
+  {
+    "cocktail": "Piña Colada",
+    "name": "피나 콜라다",
+    "abv": 20.0,
+    "ingredients": {
+      "white_rum": 60,
+      "coconut_cream": 30,
+      "pineapple_juice": 90,
+      "ice": true,
+      "garnish": "Pineapple wedge"
+    },
+    "imageSrc": "none"
+  },
+  {
+    "cocktail": "French 75",
+    "name": "프렌치 75",
+    "abv": 20.0,
+    "ingredients": {
+      "gin": 30,
+      "lemon_juice": 30,
+      "simple_syrup": 30,
+      "champagne": 60,
+      "ice": false,
+      "garnish": "Lemon twist"
+    },
+    "imageSrc": "none"
+  },
+  {
+    "cocktail": "Kir Royale",
+    "name": "키르 로얄",
+    "abv": 17.0,
+    "ingredients": {
+      "creme_de_cassis": 30,
+      "champagne": 90,
+      "ice": false,
+      "garnish": ""
+    },
+    "imageSrc": "none"
+  },
+  {
+    "cocktail": "Americano",
+    "name": "아메리카노",
+    "abv": 16.0,
+    "ingredients": {
+      "campari": 30,
+      "sweet_vermouth": 30,
+      "soda_water": 30,
+      "ice": true,
+      "garnish": "Orange slice"
+    },
+    "imageSrc": "none"
+  },
+  {
+    "cocktail": "Ramos Gin Fizz",
+    "name": "라모스 진 피즈",
+    "abv": 18.0,
+    "ingredients": {
+      "gin": 60,
+      "lemon_juice": 30,
+      "lime_juice": 30,
+      "simple_syrup": 30,
+      "cream": 30,
+      "orange_flower_water": 30,
+      "soda_water": 30,
+      "ice": false,
+      "garnish": ""
+    },
+    "imageSrc": "none"
+  },
+  {
+    "cocktail": "Last Word",
+    "name": "라스트 워드",
+    "abv": 28.0,
+    "ingredients": {
+      "gin": 30,
+      "green_chartreuse": 30,
+      "maraschino_liqueur": 30,
+      "lime_juice": 30,
+      "ice": false,
+      "garnish": "Lime twist"
+    },
+    "imageSrc": "none"
+  },
+  {
+    "cocktail": "Corpse Reviver #2",
+    "name": "코프스 리바이버 #2",
+    "abv": 25.0,
+    "ingredients": {
+      "gin": 30,
+      "triple_sec": 30,
+      "lillet_blanc": 30,
+      "lemon_juice": 30,
+      "absinthe": 30,
+      "ice": false,
+      "garnish": "Lemon peel"
+    },
+    "imageSrc": "none"
+  },
+  {
+    "cocktail": "Corpse Reviver #2",
+    "name": "코프스 리바이버 #2",
+    "abv": 25.0,
+    "ingredients": {
+      "gin": 30,
+      "orange_curaçao": 30,
+      "lillet_blanc": 30,
+      "lemon_juice": 30,
+      "absinthe": 30,
+      "ice": false,
+      "garnish": "Lemon peel"
+    },
+    "imageSrc": "none"
+  },
+  {
+    "cocktail": "Corpse Reviver #2",
+    "name": "코프스 리바이버 #2",
+    "abv": 25.0,
+    "ingredients": {
+      "gin": 30,
+      "grand_marnier": 30,
+      "lillet_blanc": 30,
+      "lemon_juice": 30,
+      "absinthe": 30,
+      "ice": false,
+      "garnish": "Lemon peel"
+    },
+    "imageSrc": "none"
+  },
+  {
+    "cocktail": "Tommy's Margarita",
+    "name": "토미스 마가리타",
+    "abv": 24.0,
+    "ingredients": {
+      "tequila": 60,
+      "lime_juice": 30,
+      "agave_syrup": 30,
+      "ice": false,
+      "garnish": "Lime wedge"
+    },
+    "imageSrc": "none"
+  },
+  {
+    "cocktail": "Penicillin",
+    "name": "페니실린",
+    "abv": 28.0,
+    "ingredients": {
+      "scotch": 60,
+      "lemon_juice": 30,
+      "honey_ginger_syrup": 30,
+      "smoky_scotch": 30,
+      "ice": true,
+      "garnish": "Candied ginger"
+    },
+    "imageSrc": "none"
+  },
+  {
+    "cocktail": "Penicillin",
+    "name": "페니실린",
+    "abv": 28.0,
+    "ingredients": {
+      "scotch": 60,
+      "lemon_juice": 30,
+      "simple_syrup": 30,
+      "smoky_scotch": 30,
+      "ice": true,
+      "garnish": "Candied ginger"
+    },
+    "imageSrc": "none"
+  },
+  {
+    "cocktail": "Bramble",
+    "name": "브람블",
+    "abv": 24.0,
+    "ingredients": {
+      "gin": 60,
+      "lemon_juice": 30,
+      "simple_syrup": 30,
+      "blackberry_liqueur": 30,
+      "ice": true,
+      "garnish": "Blackberry"
+    },
+    "imageSrc": "none"
+  },
+  {
+    "cocktail": "Bramble",
+    "name": "브람블",
+    "abv": 24.0,
+    "ingredients": {
+      "gin": 60,
+      "lemon_juice": 30,
+      "honey_syrup": 30,
+      "blackberry_liqueur": 30,
+      "ice": true,
+      "garnish": "Blackberry"
+    },
+    "imageSrc": "none"
+  },
+  {
+    "cocktail": "Paloma",
+    "name": "팔로마",
+    "abv": 20.0,
+    "ingredients": {
+      "tequila": 60,
+      "lime_juice": 30,
+      "grapefruit_juice": 60,
+      "soda_water": 30,
+      "ice": true,
+      "garnish": "Grapefruit wedge"
+    },
+    "imageSrc": "none"
+  },
+  {
+    "cocktail": "Paloma",
+    "name": "팔로마",
+    "abv": 20.0,
+    "ingredients": {
+      "tequila": 60,
+      "lime_juice": 30,
+      "orange_curaçao": 30,
+      "soda_water": 30,
+      "ice": true,
+      "garnish": "Grapefruit wedge"
+    },
+    "imageSrc": "none"
+  },
+  {
+    "cocktail": "Paloma",
+    "name": "팔로마",
+    "abv": 20.0,
+    "ingredients": {
+      "tequila": 60,
+      "lime_juice": 30,
+      "grand_marnier": 30,
+      "soda_water": 30,
+      "ice": true,
+      "garnish": "Grapefruit wedge"
+    },
+    "imageSrc": "none"
+  },
+  {
+    "cocktail": "Gin Fizz",
+    "name": "진 피즈",
+    "abv": 18.0,
+    "ingredients": {
+      "gin": 60,
+      "lemon_juice": 30,
+      "simple_syrup": 30,
+      "soda_water": 30,
+      "ice": false,
+      "garnish": "Lemon slice"
+    },
+    "imageSrc": "none"
+  },
+  {
+    "cocktail": "Singapore Sling",
+    "name": "싱가포르 슬링",
+    "abv": 22.0,
+    "ingredients": {
+      "gin": 30,
+      "cherry_liqueur": 30,
+      "triple_sec": 30,
+      "benedictine": 30,
+      "pineapple_juice": 30,
+      "lime_juice": 30,
+      "grenadine": 30,
+      "ice": true,
+      "garnish": "Pineapple wedge"
+    },
+    "imageSrc": "none"
+  },
+  {
+    "cocktail": "Singapore Sling",
+    "name": "싱가포르 슬링",
+    "abv": 22.0,
+    "ingredients": {
+      "gin": 30,
+      "cherry_liqueur": 30,
+      "orange_curaçao": 30,
+      "benedictine": 30,
+      "pineapple_juice": 30,
+      "lime_juice": 30,
+      "grenadine": 30,
+      "ice": true,
+      "garnish": "Pineapple wedge"
+    },
+    "imageSrc": "none"
+  },
+  {
+    "cocktail": "Singapore Sling",
+    "name": "싱가포르 슬링",
+    "abv": 22.0,
+    "ingredients": {
+      "gin": 30,
+      "cherry_liqueur": 30,
+      "grand_marnier": 30,
+      "benedictine": 30,
+      "pineapple_juice": 30,
+      "lime_juice": 30,
+      "grenadine": 30,
+      "ice": true,
+      "garnish": "Pineapple wedge"
+    },
+    "imageSrc": "none"
+  },
+  {
+    "cocktail": "Clover Club",
+    "name": "클로버 클럽",
+    "abv": 22.0,
+    "ingredients": {
+      "gin": 60,
+      "lemon_juice": 30,
+      "raspberry_syrup": 30,
+      "dry_vermouth": 30,
+      "ice": false,
+      "garnish": "Raspberry"
+    },
+    "imageSrc": "none"
+  },
+  {
+    "cocktail": "Cadillac Margarita",
+    "name": "캐딜락 마가리타",
+    "abv": 27.0,
+    "ingredients": {
+      "tequila": 60,
+      "lime_juice": 30,
+      "grand_marnier": 30,
+      "simple_syrup": 30,
+      "ice": false,
+      "garnish": "Lime wedge"
+    },
+    "imageSrc": "none"
+  },
+  {
+    "cocktail": "Bee's Knees",
+    "name": "비즈 니즈",
+    "abv": 24.0,
+    "ingredients": {
+      "gin": 60,
+      "lemon_juice": 30,
+      "honey_syrup": 30,
+      "ice": false,
+      "garnish": "Lemon peel"
+    },
+    "imageSrc": "none"
+  },
+  {
+    "cocktail": "Bee's Knees",
+    "name": "비즈 니즈",
+    "abv": 24.0,
+    "ingredients": {
+      "gin": 60,
+      "lemon_juice": 30,
+      "simple_syrup": 30,
+      "ice": false,
+      "garnish": "Lemon peel"
+    },
+    "imageSrc": "none"
+  },
+  {
+    "cocktail": "Bobby Burns",
+    "name": "보비 번스",
+    "abv": 30.0,
+    "ingredients": {
+      "scotch": 60,
+      "sweet_vermouth": 30,
+      "benedictine": 30,
+      "ice": false,
+      "garnish": "Lemon twist"
+    },
+    "imageSrc": "none"
+  },
+  {
+    "cocktail": "Vodka Martini",
+    "name": "보드카 마티니",
+    "abv": 35.0,
+    "ingredients": {
+      "vodka": 90,
+      "dry_vermouth": 30,
+      "ice": false,
+      "garnish": "Olive"
+    },
+    "imageSrc": "none"
+  },
+  {
+    "cocktail": "Caipirinha",
+    "name": "카이피리냐",
+    "abv": 28.0,
+    "ingredients": {
+      "cachaca": 90,
+      "lime_juice": 30,
+      "simple_syrup": 30,
+      "ice": true,
+      "garnish": "Lime wedge"
+    },
+    "imageSrc": "none"
+  },
+  {
+    "cocktail": "Dark and Stormy",
+    "name": "다크 앤 스토미",
+    "abv": 20.0,
+    "ingredients": {
+      "dark_rum": 60,
+      "ginger_beer": 60,
+      "lime_juice": 30,
+      "ice": true,
+      "garnish": "Lime wedge"
+    },
+    "imageSrc": "none"
+  },
+  {
+    "cocktail": "Aperol Spritz",
+    "name": "아페롤 스프리츠",
+    "abv": 14.0,
+    "ingredients": {
+      "aperol": 60,
+      "prosecco": 90,
+      "soda_water": 30,
+      "ice": true,
+      "garnish": "Orange slice"
     },
     "imageSrc": "none"
   }
