@@ -9,7 +9,8 @@
       "ice": false,
       "garnish": "Olive"
     },
-    "imageSrc": "none"
+    "imageSrc": "none",
+    "description": "올리브가 포인트인 진 베이스의 클래식한 마티니로, 우아하고 깔끔한 맛이 특징입니다."
   },
   {
     "cocktail": "Manhattan",
@@ -22,7 +23,8 @@
       "ice": false,
       "garnish": "Cherry"
     },
-    "imageSrc": "none"
+    "imageSrc": "none",
+    "description": "깊고 풍부한 맛을 자랑하는 클래식한 맨해튼으로, 라이 위스키의 향이 돋보입니다."
   },
   {
     "cocktail": "Negroni",
@@ -35,7 +37,8 @@
       "ice": true,
       "garnish": "Orange peel"
     },
-    "imageSrc": "none"
+    "imageSrc": "none",
+    "description": "쌉싸름한 맛이 일품인 네그로니로, 진과 캄파리의 조화가 매력적입니다."
   },
   {
     "cocktail": "Old Fashioned",
@@ -48,7 +51,8 @@
       "ice": true,
       "garnish": "Orange twist"
     },
-    "imageSrc": "none"
+    "imageSrc": "none",
+    "description": "버번의 풍부한 향과 비터스의 깊이가 조화를 이루는 클래식 올드 패션드입니다."
   },
   {
     "cocktail": "Margarita",
@@ -61,7 +65,8 @@
       "ice": false,
       "garnish": "Lime wheel"
     },
-    "imageSrc": "none"
+    "imageSrc": "none",
+    "description": "테킬라의 강렬함과 라임의 상큼함이 어우러진 전통적인 마가리타입니다."
   },
   {
     "cocktail": "Margarita",
@@ -74,7 +79,8 @@
       "ice": false,
       "garnish": "Lime wheel"
     },
-    "imageSrc": "none"
+    "imageSrc": "none",
+    "description": "오렌지 큐라소가 더해져 풍미가 깊어진 마가리타로, 더욱 다채로운 맛을 즐길 수 있습니다."
   },
   {
     "cocktail": "Margarita",
@@ -87,7 +93,8 @@
       "ice": false,
       "garnish": "Lime wheel"
     },
-    "imageSrc": "none"
+    "imageSrc": "none",
+    "description": "그랑 마르니에가 더해져 더욱 풍부한 맛을 자랑하는 마가리타입니다."
   },
   {
     "cocktail": "Daiquiri",
@@ -100,7 +107,8 @@
       "ice": false,
       "garnish": "Lime twist"
     },
-    "imageSrc": "none"
+    "imageSrc": "none",
+    "description": "화이트 럼과 라임의 상큼함이 돋보이는 클래식 다이키리로, 깔끔한 맛이 특징입니다."
   },
   {
     "cocktail": "Daiquiri",
@@ -113,7 +121,8 @@
       "ice": false,
       "garnish": "Lime twist"
     },
-    "imageSrc": "none"
+    "imageSrc": "none",
+    "description": "아가베 시럽이 더해져 달콤함이 배가된 다이키리로, 부드러운 맛을 즐길 수 있습니다."
   },
   {
     "cocktail": "Sidecar",
@@ -126,7 +135,8 @@
       "ice": false,
       "garnish": "Orange twist"
     },
-    "imageSrc": "none"
+    "imageSrc": "none",
+    "description": "꼬냑과 트리플 섹의 조화가 뛰어난 사이드카로, 상큼하면서도 깊은 맛을 자랑합니다."
   },
   {
     "cocktail": "Sidecar",
@@ -139,7 +149,8 @@
       "ice": false,
       "garnish": "Orange twist"
     },
-    "imageSrc": "none"
+    "imageSrc": "none",
+    "description": "오렌지 큐라소가 더해져 풍미가 깊어진 사이드카로, 더욱 다채로운 맛을 즐길 수 있습니다."
   },
   {
     "cocktail": "Sidecar",
@@ -152,7 +163,8 @@
       "ice": false,
       "garnish": "Orange twist"
     },
-    "imageSrc": "none"
+    "imageSrc": "none",
+    "description": "그랑 마르니에가 더해져 더욱 풍부한 맛을 느낄 수 있는 사이드카입니다."
   },
   {
     "cocktail": "Whiskey Sour",
@@ -165,7 +177,8 @@
       "ice": false,
       "garnish": "Cherry"
     },
-    "imageSrc": "none"
+    "imageSrc": "none",
+    "description": "버번과 레몬의 상큼함이 조화를 이루는 위스키 사워로, 균형 잡힌 맛이 특징입니다."
   },
   {
     "cocktail": "Whiskey Sour",
@@ -178,7 +191,8 @@
       "ice": false,
       "garnish": "Cherry"
     },
-    "imageSrc": "none"
+    "imageSrc": "none",
+    "description": "허니 시럽이 더해져 부드럽고 달콤한 맛을 자랑하는 위스키 사워입니다."
   },
   {
     "cocktail": "White Russian",
@@ -191,7 +205,8 @@
       "ice": true,
       "garnish": ""
     },
-    "imageSrc": "none"
+    "imageSrc": "none",
+    "description": "보드카와 커피 리큐르, 크림이 부드럽게 어우러져 달콤하고 크리미한 화이트 러시안입니다."
   },
   {
     "cocktail": "Black Russian",
@@ -203,7 +218,8 @@
       "ice": true,
       "garnish": ""
     },
-    "imageSrc": "none"
+    "imageSrc": "none",
+    "description": "보드카와 커피 리큐르가 강렬하게 어우러져 진한 맛을 내는 블랙 러시안입니다."
   },
   {
     "cocktail": "Cosmopolitan",
@@ -217,7 +233,8 @@
       "ice": false,
       "garnish": "Lime wedge"
     },
-    "imageSrc": "none"
+    "imageSrc": "none",
+    "description": "보드카와 크랜베리 주스가 상큼하게 어우러진 코스모폴리탄으로, 여성들에게 인기 있는 칵테일입니다."
   },
   {
     "cocktail": "Cosmopolitan",
@@ -231,7 +248,8 @@
       "ice": false,
       "garnish": "Lime wedge"
     },
-    "imageSrc": "none"
+    "imageSrc": "none",
+    "description": "오렌지 큐라소가 더해져 풍미가 깊어진 코스모폴리탄으로, 더욱 다채로운 맛을 즐길 수 있습니다."
   },
   {
     "cocktail": "Cosmopolitan",
@@ -245,7 +263,8 @@
       "ice": false,
       "garnish": "Lime wedge"
     },
-    "imageSrc": "none"
+    "imageSrc": "none",
+    "description": "그랑 마르니에가 더해져 더욱 풍부한 맛의 코스모폴리탄으로, 고급스러운 향이 특징입니다."
   },
   {
     "cocktail": "Tom Collins",
@@ -259,7 +278,8 @@
       "ice": true,
       "garnish": "Lemon slice"
     },
-    "imageSrc": "none"
+    "imageSrc": "none",
+    "description": "진과 레몬의 상큼함이 탄산과 어우러져 청량한 맛을 내는 톰 콜린스입니다."
   },
   {
     "cocktail": "Gimlet",
@@ -272,7 +292,8 @@
       "ice": false,
       "garnish": "Lime wedge"
     },
-    "imageSrc": "none"
+    "imageSrc": "none",
+    "description": "진과 라임의 상큼함이 돋보이는 클래식 김렛으로, 깔끔한 맛이 특징입니다."
   },
   {
     "cocktail": "Mai Tai",
@@ -287,7 +308,8 @@
       "ice": true,
       "garnish": "Mint sprig"
     },
-    "imageSrc": "none"
+    "imageSrc": "none",
+    "description": "화이트와 다크 럼, 오렌지 큐라소가 어우러져 열대의 향미를 느낄 수 있는 마이 타이입니다."
   },
   {
     "cocktail": "Mai Tai",
@@ -302,7 +324,8 @@
       "ice": true,
       "garnish": "Mint sprig"
     },
-    "imageSrc": "none"
+    "imageSrc": "none",
+    "description": "트리플 섹이 더해져 풍미가 깊어진 마이 타이로, 더욱 다채로운 맛을 즐길 수 있습니다."
   },
   {
     "cocktail": "Mai Tai",
@@ -317,7 +340,8 @@
       "ice": true,
       "garnish": "Mint sprig"
     },
-    "imageSrc": "none"
+    "imageSrc": "none",
+    "description": "그랑 마르니에가 더해져 더욱 풍부한 맛을 자랑하는 마이 타이로, 고급스러운 향이 특징입니다."
   },
   {
     "cocktail": "Mojito",
@@ -331,7 +355,8 @@
       "ice": true,
       "garnish": "Mint leaves"
     },
-    "imageSrc": "none"
+    "imageSrc": "none",
+    "description": "화이트 럼과 민트, 라임의 상쾌한 조화가 일품인 모히토로, 여름철에 특히 인기 있습니다."
   },
   {
     "cocktail": "Long Island Iced Tea",
@@ -349,7 +374,8 @@
       "ice": true,
       "garnish": "Lemon wedge"
     },
-    "imageSrc": "none"
+    "imageSrc": "none",
+    "description": "다양한 주류와 콜라가 어우러져 강렬한 맛을 내는 롱 아일랜드 아이스 티로, 한 잔에 여러 맛을 즐길 수 있습니다."
   },
   {
     "cocktail": "Sazerac",
@@ -363,7 +389,8 @@
       "ice": false,
       "garnish": "Lemon twist"
     },
-    "imageSrc": "none"
+    "imageSrc": "none",
+    "description": "라이 위스키와 압생트의 독특한 조화가 돋보이는 뉴올리언스의 클래식 사제락입니다."
   },
   {
     "cocktail": "Boulevardier",
@@ -376,7 +403,8 @@
       "ice": true,
       "garnish": "Orange peel"
     },
-    "imageSrc": "none"
+    "imageSrc": "none",
+    "description": "버번과 캄파리, 스위트 베르무트가 어우러져 깊은 맛을 내는 불러바디에로, 이탈리안 스타일의 칵테일입니다."
   },
   {
     "cocktail": "Hanky Panky",
@@ -389,7 +417,8 @@
       "ice": false,
       "garnish": "Orange peel"
     },
-    "imageSrc": "none"
+    "imageSrc": "none",
+    "description": "진과 스위트 베르무트, 페르넷 브랑카의 독특한 조화가 매력적인 핸키 팽키입니다."
   },
   {
     "cocktail": "Aviation",
@@ -403,7 +432,8 @@
       "ice": false,
       "garnish": "Cherry"
     },
-    "imageSrc": "none"
+    "imageSrc": "none",
+    "description": "마라스키노 리큐르와 크렘 드 비올렛이 더해져 꽃향이 나는 에비에이션으로, 독특한 색감이 특징입니다."
   },
   {
     "cocktail": "Vesper",
@@ -416,7 +446,8 @@
       "ice": false,
       "garnish": "Lemon twist"
     },
-    "imageSrc": "none"
+    "imageSrc": "none",
+    "description": "진, 보드카, 릴레 블랑이 어우러져 깔끔하고 세련된 맛을 내는 베스퍼입니다."
   },
   {
     "cocktail": "Rusty Nail",
@@ -428,7 +459,8 @@
       "ice": true,
       "garnish": "Lemon twist"
     },
-    "imageSrc": "none"
+    "imageSrc": "none",
+    "description": "스카치와 드람뷔이가 조화를 이루어 깊고 달콤한 맛을 내는 러스티 네일입니다."
   },
   {
     "cocktail": "Godfather",
@@ -440,7 +472,8 @@
       "ice": true,
       "garnish": ""
     },
-    "imageSrc": "none"
+    "imageSrc": "none",
+    "description": "스카치와 아마레또가 부드럽게 어우러져 달콤하고 고소한 맛을 자랑하는 갓파더입니다."
   },
   {
     "cocktail": "Bloody Mary",
@@ -454,7 +487,8 @@
       "ice": true,
       "garnish": "Celery stalk"
     },
-    "imageSrc": "none"
+    "imageSrc": "none",
+    "description": "보드카와 토마토 주스가 매콤하게 어우러져 깊은 맛을 내는 블러디 메리입니다."
   },
   {
     "cocktail": "Espresso Martini",
@@ -468,7 +502,8 @@
       "ice": false,
       "garnish": "Coffee beans"
     },
-    "imageSrc": "none"
+    "imageSrc": "none",
+    "description": "에스프레소와 커피 리큐르가 어우러져 진한 커피 향과 달콤함을 느낄 수 있는 에스프레소 마티니입니다."
   },
   {
     "cocktail": "Piña Colada",
@@ -481,7 +516,8 @@
       "ice": true,
       "garnish": "Pineapple wedge"
     },
-    "imageSrc": "none"
+    "imageSrc": "none",
+    "description": "코코넛 크림과 파인애플 주스가 어우러져 달콤하고 부드러운 맛을 내는 피나 콜라다입니다."
   },
   {
     "cocktail": "French 75",
@@ -495,7 +531,8 @@
       "ice": false,
       "garnish": "Lemon twist"
     },
-    "imageSrc": "none"
+    "imageSrc": "none",
+    "description": "진과 샴페인이 만나 상쾌하고 우아한 맛을 내는 프렌치 75로, 특별한 날에 제격입니다."
   },
   {
     "cocktail": "Kir Royale",
@@ -507,7 +544,8 @@
       "ice": false,
       "garnish": ""
     },
-    "imageSrc": "none"
+    "imageSrc": "none",
+    "description": "크렘 드 카시스와 샴페인이 만나 달콤하고 우아한 키르 로얄입니다."
   },
   {
     "cocktail": "Americano",
@@ -520,7 +558,8 @@
       "ice": true,
       "garnish": "Orange slice"
     },
-    "imageSrc": "none"
+    "imageSrc": "none",
+    "description": "카마리와 스위트 베르무트가 탄산과 어우러져 상큼하고 쌉싸름한 맛을 내는 아메리카노입니다."
   },
   {
     "cocktail": "Ramos Gin Fizz",
@@ -537,7 +576,8 @@
       "ice": false,
       "garnish": ""
     },
-    "imageSrc": "none"
+    "imageSrc": "none",
+    "description": "진과 레몬, 라임 주스에 크림과 오렌지 플라워 워터가 더해져 부드럽고 풍부한 맛의 라모스 진 피즈입니다."
   },
   {
     "cocktail": "Last Word",
@@ -551,7 +591,8 @@
       "ice": false,
       "garnish": "Lime twist"
     },
-    "imageSrc": "none"
+    "imageSrc": "none",
+    "description": "진과 그린 샤르트뢰즈, 마라스키노 리큐어가 어우러져 독특한 맛을 내는 라스트 워드입니다."
   },
   {
     "cocktail": "Corpse Reviver #2",
@@ -566,7 +607,8 @@
       "ice": false,
       "garnish": "Lemon peel"
     },
-    "imageSrc": "none"
+    "imageSrc": "none",
+    "description": "진과 릴레 블랑, 트리플 섹이 어우러져 상큼한 맛을 내는 코프스 리바이버 #2입니다."
   },
   {
     "cocktail": "Corpse Reviver #2",
@@ -581,7 +623,8 @@
       "ice": false,
       "garnish": "Lemon peel"
     },
-    "imageSrc": "none"
+    "imageSrc": "none",
+    "description": "오렌지 큐라소가 더해져 풍미가 깊어진 코프스 리바이버 #2입니다."
   },
   {
     "cocktail": "Corpse Reviver #2",
@@ -596,7 +639,8 @@
       "ice": false,
       "garnish": "Lemon peel"
     },
-    "imageSrc": "none"
+    "imageSrc": "none",
+    "description": "그랑 마르니에가 더해져 더욱 풍부한 맛의 코프스 리바이버 #2입니다."
   },
   {
     "cocktail": "Tommy's Margarita",
@@ -609,7 +653,8 @@
       "ice": false,
       "garnish": "Lime wedge"
     },
-    "imageSrc": "none"
+    "imageSrc": "none",
+    "description": "테킬라와 아가베 시럽이 어우러져 달콤하고 상큼한 맛을 내는 토미스 마가리타입니다."
   },
   {
     "cocktail": "Penicillin",
@@ -623,7 +668,8 @@
       "ice": true,
       "garnish": "Candied ginger"
     },
-    "imageSrc": "none"
+    "imageSrc": "none",
+    "description": "스카치와 허니 진저 시럽이 만나 스모키한 맛을 더한 페니실린입니다."
   },
   {
     "cocktail": "Penicillin",
@@ -637,7 +683,8 @@
       "ice": true,
       "garnish": "Candied ginger"
     },
-    "imageSrc": "none"
+    "imageSrc": "none",
+    "description": "심플 시럽과 스모키 스카치가 어우러져 균형 잡힌 맛을 내는 페니실린입니다."
   },
   {
     "cocktail": "Bramble",
@@ -651,7 +698,8 @@
       "ice": true,
       "garnish": "Blackberry"
     },
-    "imageSrc": "none"
+    "imageSrc": "none",
+    "description": "진과 블랙베리 리큐어가 어우러져 상큼한 맛을 내는 브람블입니다."
   },
   {
     "cocktail": "Bramble",
@@ -665,7 +713,8 @@
       "ice": true,
       "garnish": "Blackberry"
     },
-    "imageSrc": "none"
+    "imageSrc": "none",
+    "description": "허니 시럽이 더해져 달콤함이 배가된 브람블입니다."
   },
   {
     "cocktail": "Paloma",
@@ -679,7 +728,8 @@
       "ice": true,
       "garnish": "Grapefruit wedge"
     },
-    "imageSrc": "none"
+    "imageSrc": "none",
+    "description": "테킬라와 자몽 주스가 상큼하게 탄산과 어우러진 팔로마로, 여름에 특히 잘 어울립니다."
   },
   {
     "cocktail": "Paloma",
@@ -693,7 +743,8 @@
       "ice": true,
       "garnish": "Grapefruit wedge"
     },
-    "imageSrc": "none"
+    "imageSrc": "none",
+    "description": "오렌지 큐라소가 더해져 풍미가 깊어진 팔로마입니다."
   },
   {
     "cocktail": "Paloma",
@@ -707,7 +758,8 @@
       "ice": true,
       "garnish": "Grapefruit wedge"
     },
-    "imageSrc": "none"
+    "imageSrc": "none",
+    "description": "그랑 마르니에가 더해져 더욱 풍부한 맛의 팔로마입니다."
   },
   {
     "cocktail": "Gin Fizz",
@@ -721,7 +773,8 @@
       "ice": false,
       "garnish": "Lemon slice"
     },
-    "imageSrc": "none"
+    "imageSrc": "none",
+    "description": "진과 레몬 주스가 상큼하게 탄산과 어우러진 진 피즈로, 청량한 맛이 특징입니다."
   },
   {
     "cocktail": "Singapore Sling",
@@ -738,7 +791,8 @@
       "ice": true,
       "garnish": "Pineapple wedge"
     },
-    "imageSrc": "none"
+    "imageSrc": "none",
+    "description": "다양한 리큐어와 파인애플 주스가 어우러져 화려하고 복합적인 맛을 내는 싱가포르 슬링입니다."
   },
   {
     "cocktail": "Singapore Sling",
@@ -755,7 +809,8 @@
       "ice": true,
       "garnish": "Pineapple wedge"
     },
-    "imageSrc": "none"
+    "imageSrc": "none",
+    "description": "오렌지 큐라소가 더해져 풍미가 깊어진 싱가포르 슬링입니다."
   },
   {
     "cocktail": "Singapore Sling",
@@ -772,7 +827,8 @@
       "ice": true,
       "garnish": "Pineapple wedge"
     },
-    "imageSrc": "none"
+    "imageSrc": "none",
+    "description": "그랑 마르니에가 더해져 더욱 풍부한 맛의 싱가포르 슬링입니다."
   },
   {
     "cocktail": "Clover Club",
@@ -786,7 +842,8 @@
       "ice": false,
       "garnish": "Raspberry"
     },
-    "imageSrc": "none"
+    "imageSrc": "none",
+    "description": "라즈베리 시럽과 드라이 베르무트가 어우러진 상큼한 클로버 클럽으로, 과일의 향미가 돋보입니다."
   },
   {
     "cocktail": "Cadillac Margarita",
@@ -800,7 +857,8 @@
       "ice": false,
       "garnish": "Lime wedge"
     },
-    "imageSrc": "none"
+    "imageSrc": "none",
+    "description": "그랑 마르니에가 더해져 더욱 고급스러운 맛을 내는 캐딜락 마가리타로, 특별한 순간에 어울립니다."
   },
   {
     "cocktail": "Bee's Knees",
@@ -813,7 +871,8 @@
       "ice": false,
       "garnish": "Lemon peel"
     },
-    "imageSrc": "none"
+    "imageSrc": "none",
+    "description": "허니 시럽과 레몬 주스가 어우러져 달콤하고 상큼한 비즈 니즈로, 부드러운 맛이 특징입니다."
   },
   {
     "cocktail": "Bee's Knees",
@@ -826,7 +885,8 @@
       "ice": false,
       "garnish": "Lemon peel"
     },
-    "imageSrc": "none"
+    "imageSrc": "none",
+    "description": "심플 시럽이 더해져 깔끔한 맛을 자랑하는 비즈 니즈로, 진의 향미가 돋보입니다."
   },
   {
     "cocktail": "Bobby Burns",
@@ -839,7 +899,8 @@
       "ice": false,
       "garnish": "Lemon twist"
     },
-    "imageSrc": "none"
+    "imageSrc": "none",
+    "description": "스카치와 스위트 베르무트, 베네딕틴이 어우러진 풍부한 맛의 보비 번스로, 깊은 향이 특징입니다."
   },
   {
     "cocktail": "Vodka Martini",
@@ -851,7 +912,8 @@
       "ice": false,
       "garnish": "Olive"
     },
-    "imageSrc": "none"
+    "imageSrc": "none",
+    "description": "보드카와 드라이 베르무트가 조화를 이루어 올리브로 마무리된 보드카 마티니로, 깔끔하고 세련된 맛이 특징입니다."
   },
   {
     "cocktail": "Caipirinha",
@@ -864,7 +926,8 @@
       "ice": true,
       "garnish": "Lime wedge"
     },
-    "imageSrc": "none"
+    "imageSrc": "none",
+    "description": "까샤사를 사용해 상큼한 라임과 심플 시럽이 어우러진 브라질의 대표 칵테일, 카이피리냐입니다."
   },
   {
     "cocktail": "Dark and Stormy",
@@ -877,7 +940,8 @@
       "ice": true,
       "garnish": "Lime wedge"
     },
-    "imageSrc": "none"
+    "imageSrc": "none",
+    "description": "다크 럼과 진저 비어가 만나 상큼하고 매콤한 맛을 내는 다크 앤 스토미입니다."
   },
   {
     "cocktail": "Aperol Spritz",
@@ -890,6 +954,7 @@
       "ice": true,
       "garnish": "Orange slice"
     },
-    "imageSrc": "none"
+    "imageSrc": "none",
+    "description": "아페롤과 프로세코, 탄산수가 만나 상큼하고 쌉싸름한 맛을 내는 아페롤 스프리츠로, 여름철에 특히 인기 있습니다."
   }
 ]
