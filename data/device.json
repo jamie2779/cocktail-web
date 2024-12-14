@@ -1,10 +1,10 @@
 {
   "availableDrinks": [
     "gin",
+    "dry_vermouth",
     "simple_syrup",
-    "lime_juice",
     "lemon_juice",
-    "vodka",
+    "lime_juice",
     "soda_water"
   ]
 }

@@ -14,7 +14,7 @@ const OverlayMenu = ({ imageSrc, name, description, abv }: MenuProps) => {
 
   return (
     <Box
-      width="402px"
+      width="100%"
       height="162px"
       padding="16px"
       backgroundColor="white"
@@ -25,13 +25,22 @@ const OverlayMenu = ({ imageSrc, name, description, abv }: MenuProps) => {
       display="flex"
       alignItems="center"
     >
-      <Image
-        src={validImageSrc}
-        alt={name}
-        width={130}
-        height={130}
-        style={{ borderRadius: "10px", objectFit: "cover" }}
-      />
+      <Box
+        position="relative"
+        width="130px"
+        height="130px"
+        overflow="hidden"
+        borderRadius="10px"
+      >
+        <Image
+          src={validImageSrc}
+          alt={name}
+          fill
+          style={{ objectFit: "cover",
+            objectPosition: "top",
+           }}
+        />
+      </Box>
       <VStack
         align="flex-start"
         ml="16px"
@@ -42,12 +51,7 @@ const OverlayMenu = ({ imageSrc, name, description, abv }: MenuProps) => {
         <Text fontSize="13px" color="gray.500" noOfLines={2}>
           {description}
         </Text>
-        <Text
-          fontSize="18px"
-          fontWeight="semibold"
-          lineHeight="1.2"
-          noOfLines={1}
-        >
+        <Text fontSize="18px" fontWeight="semibold" lineHeight="1.2" noOfLines={1}>
           {name}
         </Text>
         <Text fontSize="13px" color="#7174BE">
