@@ -71,7 +71,7 @@ export default function CustomCocktail({
         title: "주문 실패",
         description: "재료를 추가해야 주문할 수 있습니다.",
         status: "error",
-        duration: 3000,
+        duration: 1000,
         isClosable: true,
       });
       return;
@@ -87,7 +87,7 @@ export default function CustomCocktail({
         title: "주문 실패",
         description: "총 용량은 300ml를 초과할 수 없습니다.",
         status: "error",
-        duration: 3000,
+        duration: 1000,
         isClosable: true,
       });
       return;
@@ -107,7 +107,7 @@ export default function CustomCocktail({
           title: "주문 성공",
           description: "주문이 성공적으로 큐에 추가되었습니다!",
           status: "success",
-          duration: 3000,
+          duration: 1000,
           isClosable: true,
         });
         router.push("/queue");
@@ -116,7 +116,7 @@ export default function CustomCocktail({
           title: "주문 실패",
           description: "주문에 실패했습니다. 다시 시도해 주세요.",
           status: "error",
-          duration: 3000,
+          duration: 1000,
           isClosable: true,
         });
       }
@@ -126,7 +126,7 @@ export default function CustomCocktail({
         title: "주문 에러",
         description: "주문 처리 중 에러가 발생했습니다.",
         status: "error",
-        duration: 3000,
+        duration: 1000,
         isClosable: true,
       });
     }

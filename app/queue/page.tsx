@@ -110,7 +110,7 @@ export default function Queue() {
                     title: "오류 발생",
                     description: "음료 제조를 시작할 수 없습니다.",
                     status: "error",
-                    duration: 5000,
+                    duration: 1000,
                     isClosable: true,
                 });
                 return; // 400 에러의 경우 함수 종료
@@ -132,7 +132,7 @@ export default function Queue() {
                     title: "오류 발생",
                     description: "음료 제조를 시작할 수 없습니다.",
                     status: "error",
-                    duration: 5000,
+                    duration: 1000,
                     isClosable: true,
                 });
             } else {
@@ -141,7 +141,7 @@ export default function Queue() {
                     description:
                         "음료 제조 중 예기치 않은 오류가 발생했습니다.",
                     status: "error",
-                    duration: 5000,
+                    duration: 1000,
                     isClosable: true,
                 });
             }
@@ -162,7 +162,7 @@ export default function Queue() {
                 title: "성공",
                 description: "대기열이 초기화되었습니다.",
                 status: "success",
-                duration: 5000,
+                duration: 1000,
                 isClosable: true,
             });
         } catch (error) {
@@ -171,7 +171,7 @@ export default function Queue() {
                 title: "오류 발생",
                 description: "대기열 초기화에 실패했습니다.",
                 status: "error",
-                duration: 5000,
+                duration: 1000,
                 isClosable: true,
             });
         }

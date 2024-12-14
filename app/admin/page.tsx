@@ -40,7 +40,7 @@ export default function Admin() {
                     title: "에러 발생",
                     description: "음료 정보를 불러오는 데 실패했습니다.",
                     status: "error",
-                    duration: 3000,
+                    duration: 1000,
                     isClosable: true,
                 });
             } finally {
@@ -75,7 +75,7 @@ export default function Admin() {
                     title: "하드웨어 연결 오류",
                     description: "하드웨어가 연결되지 않았습니다.",
                     status: "error",
-                    duration: 3000,
+                    duration: 1000,
                     isClosable: true,
                 });
                 return;
@@ -85,7 +85,7 @@ export default function Admin() {
                     description:
                         "현재 하드웨어가 작동 중이므로 설정을 변경할 수 없습니다.",
                     status: "error",
-                    duration: 3000,
+                    duration: 1000,
                     isClosable: true,
                 });
                 return;
@@ -114,7 +114,7 @@ export default function Admin() {
                 title: "변경 사항 저장 성공",
                 description: "음료 설정이 성공적으로 저장되었습니다.",
                 status: "success",
-                duration: 3000,
+                duration: 1000,
                 isClosable: true,
             });
         } catch (error) {
@@ -124,7 +124,7 @@ export default function Admin() {
                 description:
                     "변경 사항 저장에 실패했습니다. 다시 시도해 주세요.",
                 status: "error",
-                duration: 3000,
+                duration: 1000,
                 isClosable: true,
             });
         }
@@ -149,7 +149,7 @@ export default function Admin() {
                     title: "하드웨어 연결 오류",
                     description: "하드웨어가 연결되지 않았습니다.",
                     status: "error",
-                    duration: 3000,
+                    duration: 1000,
                     isClosable: true,
                 });
                 return; // 함수 종료

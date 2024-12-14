@@ -22,7 +22,7 @@ export default function PasswordOverlay({ onClose }: { onClose: () => void }) {
       toast({
         title: "비밀번호를 입력해주세요.",
         status: "error",
-        duration: 500,
+        duration: 1000,
         isClosable: true,
       });
       return;
@@ -44,7 +44,7 @@ export default function PasswordOverlay({ onClose }: { onClose: () => void }) {
         toast({
           title: "비밀번호가 틀렸습니다.",
           status: "error",
-          duration: 500,
+          duration: 1000,
           isClosable: true,
         });
         setPassword('');
@@ -54,7 +54,7 @@ export default function PasswordOverlay({ onClose }: { onClose: () => void }) {
       toast({
         title: "오류가 발생했습니다.",
         status: "error",
-        duration: 500,
+        duration: 1000,
         isClosable: true,
       });
     }
