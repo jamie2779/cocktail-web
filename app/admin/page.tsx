@@ -172,9 +172,9 @@ export default function Admin() {
             const postResponse = await fetch("/api/hardware", {
                 method: "POST",
                 headers: {
-                    "Content-Type": "application/json",
+                    "Content-Type": "plain/text",
                 },
-                body: JSON.stringify(moveNumber),
+                body: moveNumber.toString(),
             });
 
             if (!postResponse.ok) {
