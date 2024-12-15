@@ -108,8 +108,8 @@ async function sendMoveCommand(moveNumber: string) {
         // Step 2: 이동 명령 전송
         const postResponse = await fetch(new URL('/api/hardware', baseUrl).toString(), {
             method: "POST",
-            headers: { "Content-Type": "application/json" },
-            body: JSON.stringify(moveNumber),
+            headers: { "Content-Type": "plain/text" },
+            body: moveNumber,
         });
 
         if (!postResponse.ok) {
