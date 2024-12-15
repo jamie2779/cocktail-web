@@ -6,7 +6,8 @@ import CustomCocktail from "@/components/CustomCocktail";
 import Back from "@/components/Back";
 
 export default function CustomPage() {
-  const [ingredients, setIngredients] = useState<string[]>([]);
+  // ingredients의 타입을 { [key: string]: string }[] 로 설정
+  const [ingredients, setIngredients] = useState<{ [key: string]: string }[]>([]);
   const [isLoading, setIsLoading] = useState(true);
 
   useEffect(() => {
@@ -26,12 +27,12 @@ export default function CustomPage() {
         }
         const liquorData = await liquorResponse.json();
 
-        // 영어 이름을 한국어 이름으로 변환
-        const koreanIngredients = englishIngredients.map((ingredient: string) => {
-          return liquorData[ingredient] || ingredient; // 매핑된 한국어 이름이 없으면 영어 이름 그대로 사용
-        });
+        // 영어 이름과 한국어 이름을 객체로 변환
+        const ingredientPairs = englishIngredients.map((ingredient: string) => ({
+          [ingredient]: liquorData[ingredient] || ingredient // 매핑된 한국어 이름이 없으면 영어 이름 그대로 사용
+        }));
 
-        setIngredients(koreanIngredients); // 한국어 이름 배열 저장
+        setIngredients(ingredientPairs); // 영어-한국어 매핑 객체 배열로 저장
       } catch (error) {
         console.error("Error fetching ingredients:", error);
       } finally {

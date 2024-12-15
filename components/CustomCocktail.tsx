@@ -12,19 +12,26 @@ import {
 import IngredientItem from "@/components/IngredientItem";
 
 interface Ingredient {
-  name: string;
+  englishName: string;
+  koreanName: string;
   amount: number;
 }
 
 export default function CustomCocktail({
   initialIngredients,
 }: {
-  initialIngredients: string[];
+  initialIngredients: { [key: string]: string }[];
 }) {
+  // initialIngredients는 [{ vodka: "보드카" }, { gin: "진" }] 형태로 들어옵니다.
   const [ingredients, setIngredients] = useState<Ingredient[]>(
     initialIngredients
-      .filter((name) => name.trim() !== "") // 빈 문자열 제외
-      .map((name) => ({ name, amount: 0 }))
+      .flatMap((ingredient) =>
+        Object.entries(ingredient).map(([englishName, koreanName]) => ({
+          englishName,
+          koreanName,
+          amount: 0
+        }))
+      )
   );
 
   const router = useRouter();
@@ -56,8 +63,8 @@ export default function CustomCocktail({
       name: "커스텀 칵테일",
       abv: -1,
       ingredients: ingredients.reduce(
-        (acc: { [key: string]: number }, { name, amount }) => {
-          if (amount > 0) acc[name] = amount;
+        (acc: { [key: string]: number }, { englishName, amount }) => {
+          if (amount > 0) acc[englishName] = amount; // 주문 데이터의 키는 영어로 설정
           return acc;
         },
         {}
@@ -153,7 +160,7 @@ export default function CustomCocktail({
         {ingredients.map((ingredient, index) => (
           <IngredientItem
             key={index}
-            name={ingredient.name}
+            name={ingredient.koreanName} // UI에 한국어로 표시
             amount={ingredient.amount}
             onIncrement={() => handleIncrement(index)}
             onDecrement={() => handleDecrement(index)}
