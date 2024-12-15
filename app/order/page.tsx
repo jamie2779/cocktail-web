@@ -12,6 +12,7 @@ interface MenuItem {
   cocktail: string;
   name: string;
   abv: number;
+  description: string;
   ingredients: Record<string, number | boolean | string>;
   imageSrc: string;
 }

@@ -16,13 +16,16 @@ const Menu = ({ imageSrc, name, description, abv }: MenuProps) => {
       backgroundColor="transparent"
       borderRadius="16px"
     >
-      <Image
-        src={imageSrc}
-        alt={name}
-        width={80}
-        height={80}
-        style={{ borderRadius: "10px" }}
-      />
+      <Box width="80px" height="80px" overflow="hidden" borderRadius="10px">
+        <Image
+          src={imageSrc}
+          alt={name}
+          layout="responsive"
+          width={80}
+          height={80}
+          objectFit="cover"
+        />
+      </Box>
       <VStack align="flex-start" ml="12px" mt="9px" spacing="2px">
         <Text fontSize="13px" color="gray.500" margin={0}>
           {description}

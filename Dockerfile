@@ -29,6 +29,9 @@ COPY --from=builder /app/node_modules ./node_modules
 # 빌드된 파일 복사
 COPY --from=builder /app/.next ./.next
 COPY --from=builder /app/public ./public
+COPY --from=builder /app/server.mjs ./server.mjs
+COPY --from=builder /app/hardware-control.mjs ./hardware-control.mjs
+COPY --from=builder /app/data ./data
 
 # 포트 설정
 EXPOSE 80

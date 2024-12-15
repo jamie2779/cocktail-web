@@ -8,6 +8,7 @@ export interface MenuItem {
   cocktail: string;
   name: string;
   abv: number;
+  description: string;
   ingredients: Record<string, string | number | boolean>;
   imageSrc: string;
 }

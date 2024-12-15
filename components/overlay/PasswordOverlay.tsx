@@ -18,6 +18,16 @@ export default function PasswordOverlay({ onClose }: { onClose: () => void }) {
   const toast = useToast();
 
   const handleConfirm = async () => {
+    if (!password) {
+      toast({
+        title: "비밀번호를 입력해주세요.",
+        status: "error",
+        duration: 1000,
+        isClosable: true,
+      });
+      return;
+    }
+
     try {
       const response = await fetch("/api/admin/auth", {
         method: "POST",
@@ -34,18 +44,25 @@ export default function PasswordOverlay({ onClose }: { onClose: () => void }) {
         toast({
           title: "비밀번호가 틀렸습니다.",
           status: "error",
-          duration: 3000,
+          duration: 1000,
           isClosable: true,
         });
+        setPassword('');
       }
     } catch (error) {
       console.error("Error verifying password:", error);
       toast({
         title: "오류가 발생했습니다.",
         status: "error",
-        duration: 3000,
+        duration: 1000,
         isClosable: true,
       });
+    }
+  };
+
+  const handleKeyPress = (e: React.KeyboardEvent<HTMLInputElement>) => {
+    if (e.key === "Enter") {
+      handleConfirm();
     }
   };
 
@@ -75,6 +92,7 @@ export default function PasswordOverlay({ onClose }: { onClose: () => void }) {
             placeholder="비밀번호"
             value={password}
             onChange={(e) => setPassword(e.target.value)}
+            onKeyDown={handleKeyPress}
             width="100%"
             textAlign="center"
           />

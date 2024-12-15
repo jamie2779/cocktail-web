@@ -28,6 +28,6 @@
     "**/*.tsx",
     ".next/types/**/*.ts",
     "next.config.mjs"
-  ],
+, "hardware-socket-store.js", "server.mjs", "hardware-socket-store.js", "hardware-socket-store.js", "hardware-socket-store.js"  ],
   "exclude": ["node_modules"]
 }
